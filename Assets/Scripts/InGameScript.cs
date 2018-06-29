@@ -88,7 +88,7 @@ void Update (){
 		iDeathStatus = 2;
 	}
 	else if (iDeathStatus == 2)
-	{		
+	{
 		hMenuScript.setMenuScriptStatus(true);
 		hMenuScript.displayGameOverMenu();	//display the Game Over menu
 		
