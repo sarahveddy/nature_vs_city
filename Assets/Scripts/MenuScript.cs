@@ -157,6 +157,7 @@ void Start (){
     mrSoundOFF = tMenuTransforms[(int)MenuIDs.SettingsMenu].Find("Sound/Button_OFF/RadioButton_Foreground").GetComponent<MeshRenderer>() as MeshRenderer;
 	
 	//level select menu initialization 
+	Debug.Log("*** here ***");
 	tMenuTransforms[(int)MenuIDs.LevelSelectMenu] = tMenuGroup.Find("LevelSelect").GetComponent<Transform>() as Transform;
 	tLevelSelectButtons = new Transform[iLevelSelectButtonsCount];
 	tLevelSelectButtons[0] = tMenuTransforms[(int) MenuIDs.LevelSelectMenu].Find("Buttons/Button_Nature").GetComponent<Transform>() as Transform;
