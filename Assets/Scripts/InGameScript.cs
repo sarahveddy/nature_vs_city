@@ -51,6 +51,10 @@ void Start (){
 }//end of Start
 
 void Update (){	
+	Debug.Log("menu "+iMenuStatus);
+	Debug.Log("pause "+iPauseStatus);
+	Debug.Log("death "+iDeathStatus);
+	
 	if (iMenuStatus == 0)	//normal gameplay
 		;
 	else if (iMenuStatus == 1)//display main menu and pause game
