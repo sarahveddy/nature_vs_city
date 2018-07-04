@@ -1,0 +1,248 @@
+fileFormatVersion: 2
+guid: 9af425d97078b41ad909a981a9788d73
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Box010
+    100002: Box011
+    100004: Box03
+    100006: Box04
+    100008: Box05
+    100010: Box06
+    100012: Box07
+    100014: Box08
+    100016: Box09
+    100018: Object01
+    100020: polySurface1675
+    100022: polySurface1676
+    100024: polySurface1677
+    100026: polySurface1678
+    100028: polySurface1679
+    100030: polySurface1680
+    100032: polySurface1681
+    100034: polySurface1682
+    100036: polySurface1683
+    100038: polySurface1684
+    100040: polySurface1685
+    100042: polySurface1686
+    100044: polySurface1687
+    100046: polySurface1688
+    100048: polySurface1689
+    100050: polySurface1690
+    100052: polySurface1691
+    100054: polySurface1692
+    100056: polySurface1693
+    100058: polySurface1694
+    100060: polySurface1695
+    100062: polySurface1696
+    100064: polySurface1697
+    100066: polySurface1698
+    100068: polySurface1924
+    100070: //RootNode
+    100072: transform100
+    100074: transform101
+    100076: transform102
+    100078: transform103
+    100080: transform104
+    100082: transform105
+    100084: transform106
+    100086: transform107
+    100088: transform108
+    100090: transform109
+    100092: transform110
+    100094: transform111
+    100096: transform112
+    100098: transform113
+    100100: transform114
+    100102: transform115
+    100104: transform116
+    100106: transform84
+    100108: transform85
+    100110: transform86
+    100112: transform87
+    100114: transform88
+    100116: transform89
+    100118: transform90
+    100120: transform91
+    100122: transform92
+    100124: transform93
+    100126: transform94
+    100128: transform95
+    100130: transform96
+    100132: transform97
+    100134: transform98
+    100136: transform99
+    400000: Box010
+    400002: Box011
+    400004: Box03
+    400006: Box04
+    400008: Box05
+    400010: Box06
+    400012: Box07
+    400014: Box08
+    400016: Box09
+    400018: Object01
+    400020: polySurface1675
+    400022: polySurface1676
+    400024: polySurface1677
+    400026: polySurface1678
+    400028: polySurface1679
+    400030: polySurface1680
+    400032: polySurface1681
+    400034: polySurface1682
+    400036: polySurface1683
+    400038: polySurface1684
+    400040: polySurface1685
+    400042: polySurface1686
+    400044: polySurface1687
+    400046: polySurface1688
+    400048: polySurface1689
+    400050: polySurface1690
+    400052: polySurface1691
+    400054: polySurface1692
+    400056: polySurface1693
+    400058: polySurface1694
+    400060: polySurface1695
+    400062: polySurface1696
+    400064: polySurface1697
+    400066: polySurface1698
+    400068: polySurface1924
+    400070: //RootNode
+    400072: transform100
+    400074: transform101
+    400076: transform102
+    400078: transform103
+    400080: transform104
+    400082: transform105
+    400084: transform106
+    400086: transform107
+    400088: transform108
+    400090: transform109
+    400092: transform110
+    400094: transform111
+    400096: transform112
+    400098: transform113
+    400100: transform114
+    400102: transform115
+    400104: transform116
+    400106: transform84
+    400108: transform85
+    400110: transform86
+    400112: transform87
+    400114: transform88
+    400116: transform89
+    400118: transform90
+    400120: transform91
+    400122: transform92
+    400124: transform93
+    400126: transform94
+    400128: transform95
+    400130: transform96
+    400132: transform97
+    400134: transform98
+    400136: transform99
+    2100000: 09 - Default
+    2100002: reddd
+    2100004: 'Material #27'
+    2300000: Object01
+    2300002: polySurface1924
+    3300000: Object01
+    3300002: polySurface1924
+    4300000: polySurface1924
+    4300002: Object01
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 09 - Default
+    second: {fileID: 2100000, guid: c9cd1a5f403e7436aae96a3b1dbb3acd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #27'
+    second: {fileID: 2100000, guid: 52867ece2f2ab4499911c480e9da039b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: reddd
+    second: {fileID: 2100000, guid: c5f3e286890ca423b89e32bd750f8060, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.03939
+    meshCompression: 1
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 2
+    tangentImportMode: 2
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
