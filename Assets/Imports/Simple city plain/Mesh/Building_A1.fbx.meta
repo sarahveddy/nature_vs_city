@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: e48ed78ee18a85b4ab1b16c0f67824b5
-timeCreated: 1517349178
-licenseType: Store
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -15,47 +13,47 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: door 1
-    second: {fileID: 2100000, guid: 41e7faed0dc1d1b42a3763e973687756, type: 2}
+    second: {fileID: 2100000, guid: 70b7f75422565451faa97b43796d70b9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: door 2
-    second: {fileID: 2100000, guid: 89ba04a87c90f8043945861050b46827, type: 2}
+    second: {fileID: 2100000, guid: 6b4bc8af64dc34ae0a2c18301dfa1a6d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: facade
-    second: {fileID: 2100000, guid: f6fc837ebf04fbf479e5a5804862c742, type: 2}
+    second: {fileID: 2100000, guid: e0d2860076e444ec192cba0793c32d28, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: roof 1
-    second: {fileID: 2100000, guid: 1b7dadfea37dfc2468b123f4b0799755, type: 2}
+    second: {fileID: 2100000, guid: a210817e005be4bb396331b117dbbc3c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: roof 2
-    second: {fileID: 2100000, guid: 519dde88dbb535c40bdd267be3afc0d5, type: 2}
+    second: {fileID: 2100000, guid: c725638edc44f43f2b217a77e990c745, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: stone
-    second: {fileID: 2100000, guid: 0f62e1f21f8964e4d88427b0e9427f20, type: 2}
+    second: {fileID: 2100000, guid: 310620839e93946a5b844f421f34cbe3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: window 1
-    second: {fileID: 2100000, guid: 4629e66666f7fe1458c2046685235306, type: 2}
+    second: {fileID: 2100000, guid: c9f0efc1267584458a58310688d72d85, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: window 2
-    second: {fileID: 2100000, guid: 8d5952ca018788d408bfd944ad7ee5b7, type: 2}
+    second: {fileID: 2100000, guid: a3e9038f8398847e88c6c6b4f2702c4c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: window frames
-    second: {fileID: 2100000, guid: 9e2daa9517bae0f47b3d6d70aa4bb4c5, type: 2}
+    second: {fileID: 2100000, guid: 5fb760ed5f11746499326a09e13aed9f, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -74,6 +72,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -85,7 +84,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.05
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -98,11 +97,13 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

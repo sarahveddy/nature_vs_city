@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: a31ede3a68c1fc642a73d7ab6870b43e
-timeCreated: 1517349134
-licenseType: Store
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -20,102 +18,102 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Door_01
-    second: {fileID: 2100000, guid: 7fcf9025cfd765242ac08d6408462679, type: 2}
+    second: {fileID: 2100000, guid: 57d7d6f82524e424092988a0f7084c5a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Door_02
-    second: {fileID: 2100000, guid: a24e13f41637b404fad9b521b6ff6bc2, type: 2}
+    second: {fileID: 2100000, guid: e1def66bd3e794350b4665376f96950a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Door_03
-    second: {fileID: 2100000, guid: 401e67d6b5f7c4143887f62da5b22fb8, type: 2}
+    second: {fileID: 2100000, guid: d96a9b11fb1a34ab3bbb9a4f1411eae7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Door_04
-    second: {fileID: 2100000, guid: 606b40e211d1848458fb6f70986aa4fe, type: 2}
+    second: {fileID: 2100000, guid: 5c11e5223ebd249d2b13e7ded93ffd46, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Door_05
-    second: {fileID: 2100000, guid: 3b8c274e23f9f9b45883623ba71e36bd, type: 2}
+    second: {fileID: 2100000, guid: ac816b9d98b99448e8c1924651b4574e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Facade_01
-    second: {fileID: 2100000, guid: 54b036310d7d58441a52a350cba7bc01, type: 2}
+    second: {fileID: 2100000, guid: 1e13cdf4439b046ecaf8a4b99f873e08, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Facade_02
-    second: {fileID: 2100000, guid: 138eb3215110b2543866180781a390e7, type: 2}
+    second: {fileID: 2100000, guid: 7152678e6b9b948f3bee34059637985b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Fire_escape_03
-    second: {fileID: 2100000, guid: 2d406ea449e44ad4dbcbaddec52d3103, type: 2}
+    second: {fileID: 2100000, guid: 75766de9a7679433e82e004a98102581, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Fire_escape_04
-    second: {fileID: 2100000, guid: 2253b687d5605a74aaacd8c1b49065df, type: 2}
+    second: {fileID: 2100000, guid: eb7ce592bcce7491cb46bc88aae1c425, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Gold
-    second: {fileID: 2100000, guid: fd32d554237ab7b42969c635d2c98dff, type: 2}
+    second: {fileID: 2100000, guid: 5f41ddef57c734e21ac67c6e319042f2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Roof.001
-    second: {fileID: 2100000, guid: 5f545bca6a3478045b9a33ac041aadb0, type: 2}
+    second: {fileID: 2100000, guid: 81c75cb4b226d40bd9f008a3f53afd55, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Surface
-    second: {fileID: 2100000, guid: 15e705b4eb576644bb895b16ab825d70, type: 2}
+    second: {fileID: 2100000, guid: 76059ab85c79a4a718360419cf5c2b90, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Window_board
-    second: {fileID: 2100000, guid: ec1bfb46a3b388e40a8790c655f09c87, type: 2}
+    second: {fileID: 2100000, guid: d6508b9ead2bb46bebf837073089df8a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Window_frames.001
-    second: {fileID: 2100000, guid: d2bf268a9a65e2742952be932efa780a, type: 2}
+    second: {fileID: 2100000, guid: 0f1843e36452b4eb78a6783ed2d2ff38, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Windows_01
-    second: {fileID: 2100000, guid: e3adce03b13b12b41b0fd3ef39d8ba57, type: 2}
+    second: {fileID: 2100000, guid: 8ecaa4cab57834d5cb0927f66dd6a0c6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Windows_02
-    second: {fileID: 2100000, guid: 1d691df3204532e489a099fa48e9d9ae, type: 2}
+    second: {fileID: 2100000, guid: a8537c8b1e3f845f0b6c955c70e92220, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: congregate
-    second: {fileID: 2100000, guid: 926f51a7e1b3084468174325c6d89cdf, type: 2}
+    second: {fileID: 2100000, guid: 236c3ffcfd66148b59f35073a8846fd1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: fire_escape_01
-    second: {fileID: 2100000, guid: 0ea5251c4a513434183a7f6c3f910611, type: 2}
+    second: {fileID: 2100000, guid: c981443d397704cc68b5883643e38133, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: fire_escape_02
-    second: {fileID: 2100000, guid: ddfd6fac98d3d0441bb634f929dde1ed, type: 2}
+    second: {fileID: 2100000, guid: ef5a020dac460463b8bceea56fdb5ac5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: railing
-    second: {fileID: 2100000, guid: fa56b95c76f072a4aadeec1f23e8fca6, type: 2}
+    second: {fileID: 2100000, guid: ad8aa703b99194dc795d894cb74ba2ed, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -134,6 +132,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -145,7 +144,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.05
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -158,11 +157,13 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
