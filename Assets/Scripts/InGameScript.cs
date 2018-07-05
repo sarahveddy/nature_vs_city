@@ -51,9 +51,9 @@ void Start (){
 }//end of Start
 
 void Update (){	
-//	Debug.Log("menu "+iMenuStatus);
-//	Debug.Log("pause "+iPauseStatus);
-//	Debug.Log("death "+iDeathStatus);
+	Debug.Log("menu "+iMenuStatus);
+	Debug.Log("pause "+iPauseStatus);
+	Debug.Log("death "+iDeathStatus);
 	
 	if (iMenuStatus == 0)	//normal gameplay
 		;
@@ -94,7 +94,7 @@ void Update (){
 	else if (iDeathStatus == 2)
 	{
 		hMenuScript.setMenuScriptStatus(true);
-		hMenuScript.displayGameOverMenu();	//display the Game Over menu
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 		
 		iDeathStatus = 0;
 	}
