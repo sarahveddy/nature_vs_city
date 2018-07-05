@@ -51,9 +51,9 @@ void Start (){
 }//end of Start
 
 void Update (){	
-	Debug.Log("menu "+iMenuStatus);
-	Debug.Log("pause "+iPauseStatus);
-	Debug.Log("death "+iDeathStatus);
+//	Debug.Log("menu "+iMenuStatus);
+//	Debug.Log("pause "+iPauseStatus);
+//	Debug.Log("death "+iDeathStatus);
 	
 	if (iMenuStatus == 0)	//normal gameplay
 		;
@@ -146,7 +146,7 @@ public void setupDeathMenu (){
     public void processClicksPauseMenu ( MenuScript.PauseMenuEvents index  ){
         if (index == MenuScript.PauseMenuEvents.MainMenu )
 	{	
-            SceneManager.LoadScene("TESTSCENE");
+            SceneManager.LoadScene("MainMenu");
 		
             hMenuScript.InvokeShowMenu((int)MenuScript.MenuIDs.MainMenu);
 		iMenuStatus = 1;	//display main menu
@@ -167,12 +167,12 @@ public void setupDeathMenu (){
         if (index == MenuScript.GameOverMenuEvents.Play)
 	{
 		hMenuScript.showHUDElements();
-        SceneManager.LoadScene("TESTSCENE");
+        SceneManager.LoadScene("MainMenu");
 		launchGame();
 	}
         else if (index == MenuScript.GameOverMenuEvents.Back)
 	{
-        SceneManager.LoadScene("TESTSCENE");
+        SceneManager.LoadScene("MainMenu");
 		
             hMenuScript.InvokeShowMenu((int)MenuScript.MenuIDs.MainMenu);
 		iMenuStatus = 1;	//display main menu
