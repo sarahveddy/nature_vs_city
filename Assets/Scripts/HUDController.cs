@@ -47,6 +47,7 @@ void Start (){
 	tHUDCurrencyContainerMid = GameObject.Find("HUDMainGroup/HUDGroup/HUDCurrencyGroup/HUD_Currency_BG").GetComponent<Transform>() as Transform;	//	HUD Currency Container
 		
 	//get time difference to calculate score
+	
 	fCurrentTime = Time.time;
 	fPreviousTime = Time.time;
 	
@@ -102,6 +103,9 @@ IEnumerator  UpdateHUDStats (){
 		
 	tmHUDCurrencyText.text = hPowerupsMainController.getCurrencyUnits().ToString();	//update Currency on HUD
 	tmHUDScoreText.text = hInGameScript.getLevelScore().ToString();				//update Score on HUD
+//	tmHUDScoreText.text = Time.realtimeSinceStartup.ToString();				//for debugging for now TODO: remove
+
+
 }
 
 /*

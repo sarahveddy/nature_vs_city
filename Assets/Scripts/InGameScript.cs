@@ -31,6 +31,8 @@ private int iMenuStatus;
 private bool  bGameOver = false;
 private bool  bGamePaused = false;
 
+//private bool gamePlayStart = false; 
+
 void Start (){
 	Application.targetFrameRate = 60;		//ceiling the frame rate on 60 (debug only)
 	
@@ -51,12 +53,20 @@ void Start (){
 }//end of Start
 
 void Update (){	
-	Debug.Log("menu "+iMenuStatus);
-	Debug.Log("pause "+iPauseStatus);
-	Debug.Log("death "+iDeathStatus);
+//	Debug.Log("menu "+iMenuStatus);
+//	Debug.Log("pause "+iPauseStatus);
+//	Debug.Log("death "+iDeathStatus);
+	if (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart > 60.00)
+	{
+		Debug.Log("1 MIN HAVE PASSED!!!");
+	}
 	
 	if (iMenuStatus == 0)	//normal gameplay
-		;
+		if (PersistentManagerScript.Instance.gameplayStart == 0.0)
+		{
+			PersistentManagerScript.Instance.gameplayStart = Time.realtimeSinceStartup; 
+			Debug.Log("GAMEPLAY START : "+ PersistentManagerScript.Instance.gameplayStart.ToString()); 
+		}
 	else if (iMenuStatus == 1)//display main menu and pause game
 	{
 		hMenuScript.setMenuScriptStatus(true);
@@ -193,7 +203,7 @@ public void collidedWithObstacle (){
 *	FUNCTION: Pause game if application closed/ switched on device
 */
 void OnApplicationPause ( bool pause  ){
-	Debug.Log("Application Paused : "+pause);
+	//Debug.Log("Application Paused : "+pause);
 	if(Application.isEditor==false)
 	{
 		if(bGamePaused==false&&pause==false)
