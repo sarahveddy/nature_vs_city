@@ -103,8 +103,6 @@ IEnumerator  UpdateHUDStats (){
 		
 	tmHUDCurrencyText.text = hPowerupsMainController.getCurrencyUnits().ToString();	//update Currency on HUD
 	tmHUDScoreText.text = hInGameScript.getLevelScore().ToString();				//update Score on HUD
-//	tmHUDScoreText.text = Time.realtimeSinceStartup.ToString();				//for debugging for now TODO: remove
-
 
 }
 

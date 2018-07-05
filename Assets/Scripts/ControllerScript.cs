@@ -82,6 +82,7 @@ private bool  JumpAnimationFirstTime = true;	//play death animation once
 private Camera HUDCamera;
 
 private Transform tPauseButton;
+public Transform tQuitButton; 
 private Transform tHUDGroup;
 private SwipeControls swipeLogic;
 private int iLanePosition;						//current lane number -- -1, 0 or 1
@@ -145,6 +146,8 @@ void Start (){
 	tFrontCollider = GameObject.Find("PlayerFrontCollider").transform;
 	tHUDGroup = GameObject.Find("HUDMainGroup/HUDGroup").transform;
 	tPauseButton = GameObject.Find("HUDMainGroup/HUDGroup/HUDPause").transform;
+	tQuitButton = GameObject.Find("HUDMainGroup/HUDGroup/HUDQuit").transform;
+	tQuitButton.gameObject.active = false; 
 	
 	HUDCamera = GameObject.Find("HUDCamera").GetComponent<Camera>();
 	
@@ -278,6 +281,7 @@ void FixedUpdate (){
 *	CALLED BY:	Update()
 */
 private void getClicks (){
+	//TODO: this is where pause menu is accessed from the HUD
 	if(Input.GetMouseButtonUp(0) && bMouseReleased==true)
 	{
             Vector3 screenPoint = new  Vector3(0,0,0) ;
@@ -293,6 +297,19 @@ private void getClicks (){
 			if(Orb_Rect.Contains(Input.mousePosition))
 			{				
 				hInGameScript.pauseGame();
+			}
+			buttonSize = new Vector3(Screen.width/6,Screen.width/6,0.0f);
+			screenPoint = HUDCamera.WorldToScreenPoint( tQuitButton.position );
+			
+			Orb_Rect = new Rect(screenPoint.x - ( buttonSize.x * 0.5f ), screenPoint.y - ( buttonSize.y * 0.5f ), buttonSize.x, buttonSize.y);
+			if(Orb_Rect.Contains(Input.mousePosition))
+			{			
+				#if UNITY_EDITOR
+					UnityEditor.EditorApplication.isPlaying = false; 
+				#else
+					Application.Quit(); 
+				#endif
+
 			}
 		}
 		

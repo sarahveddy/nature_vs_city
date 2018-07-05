@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using System.Collections;
 
@@ -37,8 +38,7 @@ public enum MenuIDs
 	PauseMenu = 1,
 	GameOverMenu = 2,
 	InstructionsMenu = 3,
-	SettingsMenu = 4, 
-	//LevelSelectMenu = 5
+	SettingsMenu = 4
 }
 
 //events/ buttons on the pause menu
@@ -86,9 +86,6 @@ private int iInstructionsButtonsCount = 1;
 //settings menu
 private Transform[] tSettingsButtons;
 private int iSettingsButtonsCount = 7;
-//level select menu
-//private Transform[] tLevelSelectButtons;
-//private int iLevelSelectButtonsCount = 2;
 
 //meshrenderers of all the radio buttons in settings menu
 private MeshRenderer mrSwipeControls;
@@ -155,13 +152,6 @@ void Start (){
     mrMusicOFF = tMenuTransforms[(int)MenuIDs.SettingsMenu].Find("Music/Button_OFF/RadioButton_Foreground").GetComponent<MeshRenderer>() as MeshRenderer;
     mrSoundON = tMenuTransforms[(int)MenuIDs.SettingsMenu].Find("Sound/Button_ON/RadioButton_Foreground").GetComponent<MeshRenderer>() as MeshRenderer;
     mrSoundOFF = tMenuTransforms[(int)MenuIDs.SettingsMenu].Find("Sound/Button_OFF/RadioButton_Foreground").GetComponent<MeshRenderer>() as MeshRenderer;
-	
-	//level select menu initialization 
-//	Debug.Log("*** here ***");
-//	tMenuTransforms[(int)MenuIDs.LevelSelectMenu] = tMenuGroup.Find("LevelSelect").GetComponent<Transform>() as Transform;
-//	tLevelSelectButtons = new Transform[iLevelSelectButtonsCount];
-//	tLevelSelectButtons[0] = tMenuTransforms[(int) MenuIDs.LevelSelectMenu].Find("Buttons/Button_Nature").GetComponent<Transform>() as Transform;
-//	tLevelSelectButtons[1] = tMenuTransforms[(int) MenuIDs.LevelSelectMenu].Find("Buttons/Button_City").GetComponent<Transform>() as Transform;
 	
 	///////HUD//////
 	(GameObject.Find("HUDMainGroup/HUDPauseCounter").GetComponent<MeshRenderer>() as MeshRenderer).enabled = false;
@@ -246,8 +236,6 @@ private void listenerClicks (){
 				handlerInstructionsMenu(hit.transform);
             else if (CurrentMenu == (int) MenuIDs.SettingsMenu)
 				handlerSettingsMenu(hit.transform);
-//			else if (CurrentMenu == (int) MenuIDs.LevelSelectMenu)
-//				handlerLevelSelectMenu(hit.transform);
 		}//end of if raycast
 		
 		iTapState = 2;
@@ -257,7 +245,6 @@ private void listenerClicks (){
 		if (Input.GetMouseButtonUp(0))
 			iTapState = 0;
 	}
-	
 }//end of listner function
 
 /*
@@ -266,12 +253,10 @@ private void listenerClicks (){
 private void handlerMainMenu ( Transform buttonTransform  ){		
 	if (tMainMenuButtons[0] == buttonTransform)//Tap to Play button
 	{
-		CloseMenu((int) MenuIDs.MainMenu);
+        CloseMenu((int)MenuIDs.MainMenu);
+		
 		hInGameScript.launchGame();	//start the gameplay
 		setMenuScriptStatus(false);
-//		StartCoroutine(ShowMenu((int) MenuIDs.LevelSelectMenu));
-//		CurrentMenu = (int) MenuIDs.LevelSelectMenu;
-
 	}
 	else if (tMainMenuButtons[1] == buttonTransform)//information button
 	{
@@ -398,27 +383,6 @@ private void handlerSettingsMenu ( Transform buttonTransform  ){
 	}
 }
 
-//	private void handlerLevelSelectMenu(Transform buttonTransform)
-//	{
-//		if (tLevelSelectButtons[0] == buttonTransform)//Nature button
-//		{		
-//			CloseMenu((int)MenuIDs.LevelSelectMenu);
-//		
-//			hInGameScript.launchGame();	//start the gameplay
-//			setMenuScriptStatus(false);
-//			Debug.Log("NATURE BUTTON"); 
-//		}
-//		else if (tLevelSelectButtons[1] == buttonTransform)//City button
-//		{		
-//			CloseMenu((int)MenuIDs.LevelSelectMenu);
-//		
-//			hInGameScript.launchGame();	//start the gameplay
-//			setMenuScriptStatus(false);
-//			Debug.Log("CITY BUTTON"); 
-//		}
-//	}
-
-		
 
 public void InvokeShowMenu (int index)
 {
@@ -438,7 +402,7 @@ public void InvokeShowMenu (int index)
             tMenuTransforms[(int) MenuIDs.GameOverMenu].position = new Vector3(tMenuTransforms[(int) MenuIDs.GameOverMenu].position.x,0,tMenuTransforms[(int) MenuIDs.GameOverMenu].position.z);
     else if ((int) MenuIDs.InstructionsMenu == index)
             tMenuTransforms[(int) MenuIDs.InstructionsMenu].position = new Vector3(tMenuTransforms[(int) MenuIDs.InstructionsMenu].position.x,0,tMenuTransforms[(int) MenuIDs.InstructionsMenu].position.z);
-    else if ((int) MenuIDs.SettingsMenu == index)	
+    else if ((int) MenuIDs.SettingsMenu == index)
 	{
 		//check which type of controls are active and 
 		//set the appropriate radio button 
@@ -481,11 +445,6 @@ public void InvokeShowMenu (int index)
 		
             tMenuTransforms[(int) MenuIDs.SettingsMenu].position = new Vector3(tMenuTransforms[(int) MenuIDs.SettingsMenu].position.x,0,tMenuTransforms[(int) MenuIDs.SettingsMenu].position.z);
 	}
-//    else if ((int) MenuIDs.LevelSelectMenu == index)
-//    {
-//	    tMenuTransforms[(int) MenuIDs.LevelSelectMenu].position = new Vector3(tMenuTransforms[(int) MenuIDs.LevelSelectMenu].position.x,0,tMenuTransforms[(int) MenuIDs.LevelSelectMenu].position.z);
-//    }
-	    
 	
 	CurrentMenu = index;
 	hideHUDElements();	//hide the HUD
@@ -507,9 +466,7 @@ private void CloseMenu ( int index  ){
             tMenuTransforms[(int) MenuIDs.InstructionsMenu].position = new Vector3(tMenuTransforms[(int)MenuIDs.InstructionsMenu].position.x,1000,tMenuTransforms[(int)MenuIDs.InstructionsMenu].position.z);
     else if ((int) MenuIDs.SettingsMenu == index)		
             tMenuTransforms[(int) MenuIDs.SettingsMenu].position = new Vector3(tMenuTransforms[(int)MenuIDs.SettingsMenu].position.x,1000,tMenuTransforms[(int)MenuIDs.SettingsMenu].position.z);
-//    else if ((int) MenuIDs.LevelSelectMenu == index)		
-//	    	tMenuTransforms[(int) MenuIDs.LevelSelectMenu].position = new Vector3(tMenuTransforms[(int)MenuIDs.LevelSelectMenu].position.x,1000,tMenuTransforms[(int)MenuIDs.LevelSelectMenu].position.z);
-
+	
 	CurrentMenu = -1;
 }
 
