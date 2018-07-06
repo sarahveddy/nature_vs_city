@@ -56,10 +56,10 @@ void Update (){
 //	Debug.Log("menu "+iMenuStatus);
 //	Debug.Log("pause "+iPauseStatus);
 //	Debug.Log("death "+iDeathStatus);
-	if (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart > 300.00)
+	if (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart > 30.00)
 	{
 		hControllerScript.tQuitButton.gameObject.active = true; 
-		//Debug.Log("1 MIN HAS PASSED!!!");
+		//Debug.Log("5 MIN HAVE PASSED!!!");
 	}
 	
 	if (iMenuStatus == 0)	//normal gameplay
