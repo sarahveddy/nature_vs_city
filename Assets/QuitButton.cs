@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+*	FUNCTION:
+*	This script closes the game.
+*
+*/
+
 public class QuitButton : MonoBehaviour {
 
 	public void Quit()

@@ -29,7 +29,7 @@ private Vector3 v3BNCDefaultScale;
 private Vector3 v3BFCDefaultScale;
 
 //Variables
-private float fCurrentWalkSpeed;
+public float fCurrentWalkSpeed;
 
 private float tCurrentAngle = 0.0f;	//current rotation along Y axis
 private float fJumpForwardFactor = 0.0f;	//movement speed increase on jump
@@ -46,7 +46,7 @@ private bool  bDiveFlag = false;			//force character to dive during jump
 private bool  bExecuteLand = false;
 private bool  bInStrafe = false;
 
-private float fForwardAccleration = 0.0f;
+public float fForwardAccleration = 0.0f;
 private Transform tBlobShadowPlane;	//the shadow under the player
 private Vector3 CurrentDirection;//set player rotation according to path
 
@@ -67,7 +67,7 @@ private RaycastHit hitInfo;	//whats under the player character
 private bool  bGroundhit = false;	//is that an object under the player character
 private float fHorizontalDistance = 0.0f;	//calculate player's horizontal distance on path
 
-private float fCurrentForwardSpeed = 0.5f;	//sets movement based on spline
+public float fCurrentForwardSpeed = 0.5f;	//sets movement based on spline
 private float fCurrentDistance = 0.0f;//distance between the start and current position during the run
 private float fCurrentMileage = 0.0f;//used to calculate the score based on distance covered
 
@@ -96,9 +96,9 @@ private bool  bDirectionQueueFlag = false;
 
 //Physics Constants
 //change these to adjust the initial and final movement speed
-private float fStartingWalkSpeed = 150.0f;//when player starts running
-private float fEndingWalkSpeed = 230.0f;	//final speed after acclerating
-private float fCurrentWalkAccleration = 0.5f;	//rate of accleartion
+public float fStartingWalkSpeed = 150.0f;//when player starts running
+public float fEndingWalkSpeed = 230.0f;	//final speed after acclerating
+public float fCurrentWalkAccleration = 0.5f;	//rate of accleartion
 
 //change these to adjust the jump height and displacement
 private float fJumpPush = 185;			//force with which player pushes the ground on jump
@@ -119,6 +119,8 @@ public void toggleSwipeControls ( bool state  ){
 	PlayerPrefs.SetInt("ControlsType", (state == true ? 1 : 0));
 	PlayerPrefs.Save();
 }
+
+private bool step = true; 
 
 void Start (){
 	hMenuScript = GameObject.Find("MenuGroup").GetComponent<MenuScript>() as MenuScript;
@@ -271,6 +273,7 @@ void FixedUpdate (){
 		
 	//acclerate movement speed with time
 	if(fCurrentWalkSpeed<fEndingWalkSpeed)
+		//TODO CHANGE ACCELERATION HERE??
 		fCurrentWalkSpeed += (fCurrentWalkAccleration * Time.fixedDeltaTime);
 		
 	aPlayer["run"].speed = Mathf.Clamp( (fCurrentWalkSpeed/fStartingWalkSpeed)/1.1f, 0.8f, 1.2f );	//set run animation speed according to current speed
@@ -395,11 +398,28 @@ void SetTransform ()
 		else			//JUMP
 		{
 			setCurrentJumpHeight();
-                tPlayer.position = new Vector3(tPlayer.position.x,fCurrentHeight,tPlayer.position.z);
+			tPlayer.position = new Vector3(tPlayer.position.x,fCurrentHeight,tPlayer.position.z);
 		}
 	}
+	    tPlayer.position = new Vector3(Desired_Horinzontal_Pos.x,tPlayer.position.y,Desired_Horinzontal_Pos.z);
+
+	    
+//TODO: BAD SOLUTION FOR TAPPING TO RUN	    
+//	if (Input.GetKey(KeyCode.M) & step)
+//	{		
+//		Debug.Log("***Left***");
+//		tPlayer.position = new Vector3(Desired_Horinzontal_Pos.x,tPlayer.position.y,Desired_Horinzontal_Pos.z);
+//		step = !step; 
+//	}
+//	else if (Input.GetKey(KeyCode.N) & !step)
+//	{
+//		Debug.Log("***Right***");
+//		tPlayer.position = new Vector3(Desired_Horinzontal_Pos.x,tPlayer.position.y,Desired_Horinzontal_Pos.z);
+//		step = !step; 
+//	}
 	
-        tPlayer.position = new Vector3(Desired_Horinzontal_Pos.x,tPlayer.position.y,Desired_Horinzontal_Pos.z);
+	
+        
 
 //	tPlayer.position.x = Desired_Horinzontal_Pos.x;//set player position in x-axis
 //	tPlayer.position.z = Desired_Horinzontal_Pos.z;//set player position in y-axis
