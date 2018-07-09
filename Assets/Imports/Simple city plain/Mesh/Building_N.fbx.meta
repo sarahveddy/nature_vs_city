@@ -13,62 +13,62 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Door
-    second: {fileID: 2100000, guid: e67894f8acfa64c2fbea5b802d108df5, type: 2}
+    second: {fileID: 2100000, guid: c987193a24da04fae87d49152e235c9b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Roof
-    second: {fileID: 2100000, guid: f6f96d23aebea48eaa5f9660ff352548, type: 2}
+    second: {fileID: 2100000, guid: 5f42c15f6f3554b04a8ff254aadb378c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: WhiteWood
-    second: {fileID: 2100000, guid: 9d3679e950c8c46aa9cffe64c0f9827e, type: 2}
+    second: {fileID: 2100000, guid: 65f8554758f924d909674997d99add5c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Window_frames
-    second: {fileID: 2100000, guid: 7806697679381437ba5c4ebf40e45b31, type: 2}
+    second: {fileID: 2100000, guid: 93f8e9def70944f81a7829dec8f09c59, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Windows_01
-    second: {fileID: 2100000, guid: 8ecaa4cab57834d5cb0927f66dd6a0c6, type: 2}
+    second: {fileID: 2100000, guid: f346cc714edc9446489dd47284cf748c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Windows_02
-    second: {fileID: 2100000, guid: a8537c8b1e3f845f0b6c955c70e92220, type: 2}
+    second: {fileID: 2100000, guid: 8d911958937ae4914bceb8015ac32401, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: anger stone 1
-    second: {fileID: 2100000, guid: 2acbc31933b174a12a3839bde7e54d43, type: 2}
+    second: {fileID: 2100000, guid: 0b83bac51fe6b4cb0be535d722db17d4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: anger stone 2
-    second: {fileID: 2100000, guid: bfda4f0455a9e4b9b974307001845dea, type: 2}
+    second: {fileID: 2100000, guid: 9dc305704ddf046468337b02fd5a4a69, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: facade
-    second: {fileID: 2100000, guid: e0d2860076e444ec192cba0793c32d28, type: 2}
+    second: {fileID: 2100000, guid: a65785fbae05b401784bb9b16551045b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: metal
-    second: {fileID: 2100000, guid: 8b90bac258c50448c987e1a98da19a77, type: 2}
+    second: {fileID: 2100000, guid: dbac63736c4404e8fa2c3a69bb97a282, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: railing
-    second: {fileID: 2100000, guid: ad8aa703b99194dc795d894cb74ba2ed, type: 2}
+    second: {fileID: 2100000, guid: 6faa4bd73a26842148f4626387f5f394, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: stairs
-    second: {fileID: 2100000, guid: f68cd9b7f364f497fa4b2b86c472b459, type: 2}
+    second: {fileID: 2100000, guid: a65af65d679bc489da4b2e487c3fce47, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -99,7 +99,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.05
+    globalScale: 8
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -118,7 +118,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

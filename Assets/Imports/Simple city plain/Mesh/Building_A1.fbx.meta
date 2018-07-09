@@ -13,47 +13,47 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: door 1
-    second: {fileID: 2100000, guid: 70b7f75422565451faa97b43796d70b9, type: 2}
+    second: {fileID: 2100000, guid: 1ec597a784b33466b8b551125c12d388, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: door 2
-    second: {fileID: 2100000, guid: 6b4bc8af64dc34ae0a2c18301dfa1a6d, type: 2}
+    second: {fileID: 2100000, guid: 6931c8df373564d59938d464a671681e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: facade
-    second: {fileID: 2100000, guid: e0d2860076e444ec192cba0793c32d28, type: 2}
+    second: {fileID: 2100000, guid: a65785fbae05b401784bb9b16551045b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: roof 1
-    second: {fileID: 2100000, guid: a210817e005be4bb396331b117dbbc3c, type: 2}
+    second: {fileID: 2100000, guid: cc8780614a4554ad5ac602bd557ddaca, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: roof 2
-    second: {fileID: 2100000, guid: c725638edc44f43f2b217a77e990c745, type: 2}
+    second: {fileID: 2100000, guid: 5b19869b05aae40eaafdc93f61ad7401, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: stone
-    second: {fileID: 2100000, guid: 310620839e93946a5b844f421f34cbe3, type: 2}
+    second: {fileID: 2100000, guid: 4d3e0b38cbe3343ff8254fd8265e1d59, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: window 1
-    second: {fileID: 2100000, guid: c9f0efc1267584458a58310688d72d85, type: 2}
+    second: {fileID: 2100000, guid: bbfc22dac1c46435ea722b0b2b21f103, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: window 2
-    second: {fileID: 2100000, guid: a3e9038f8398847e88c6c6b4f2702c4c, type: 2}
+    second: {fileID: 2100000, guid: ced4fa3f4e20e4a1381c29c3b18b10aa, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: window frames
-    second: {fileID: 2100000, guid: 5fb760ed5f11746499326a09e13aed9f, type: 2}
+    second: {fileID: 2100000, guid: 3150a6381112645028a3df2befec9354, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -84,7 +84,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.05
+    globalScale: 8
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -103,10 +103,10 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1
