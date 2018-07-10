@@ -318,9 +318,9 @@ void FixedUpdate (){
 		else
 		{
 			fCurrentWalkSpeed += 1;
-			if (fCurrentWalkSpeed > 300)
+			if (fCurrentWalkSpeed > 225)
 			{
-				fCurrentWalkSpeed = 300; 
+				fCurrentWalkSpeed = 225; 
 			}
 		}
 		
