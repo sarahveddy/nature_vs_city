@@ -780,13 +780,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePrefabs:
-  - {fileID: 100002, guid: 334ab5e753cb44aa2b4ea30f81bddab6, type: 2}
   - {fileID: 100034, guid: a327ae820daeb467599fed914540b820, type: 2}
-  - {fileID: 100000, guid: 14cd1109d6828483fba2a36df8974cf7, type: 2}
+  - {fileID: 100002, guid: 334ab5e753cb44aa2b4ea30f81bddab6, type: 2}
   - {fileID: 100002, guid: c9b0e5fba297d4e48b1ca84fe4f71bad, type: 2}
   - {fileID: 100000, guid: a87ca04aefda946f8a7e738f9966e4a6, type: 2}
-  - {fileID: 100004, guid: 14cec14fdfb594ec18a7dadc2e2dce60, type: 2}
+  - {fileID: 100000, guid: 14cd1109d6828483fba2a36df8974cf7, type: 2}
   - {fileID: 100002, guid: 1cfbf017387004f7ab895ed055fd16bd, type: 2}
+  - {fileID: 100004, guid: 14cec14fdfb594ec18a7dadc2e2dce60, type: 2}
   powerupPrefabs:
   - {fileID: 100000, guid: 5f317cbbd24c54501a7788776c001d85, type: 2}
   currencyPrefab: {fileID: 100004, guid: 5aa14576ba85d4ea995984762c527f26, type: 2}
@@ -823,6 +823,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7186f2f1662b14494a5c2ec3fa30e12a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fCurrentWalkSpeed: 0
+  fCurrentForwardSpeed: 0.5
+  tQuitButton: {fileID: 0}
+  fCurrentWalkAccleration: 0.5
+  lastKeyPress: -1000
 --- !u!114 &330
 MonoBehaviour:
   m_ObjectHideFlags: 0

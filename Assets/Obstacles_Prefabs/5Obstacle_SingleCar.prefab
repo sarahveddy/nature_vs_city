@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4144497232668002}
   - component: {fileID: 114938581239666936}
   m_Layer: 12
-  m_Name: Obstacle_SingleCar
+  m_Name: 5Obstacle_SingleCar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -342,7 +342,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 6e33bccef56fe40678fb5405109e495b, type: 2}
+  - {fileID: 2100000, guid: 5ed93c0be4b574d1ab20ee5ad5048442, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -553,4 +553,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleAreaType: 0
-  frequency: 5
+  frequency: 100

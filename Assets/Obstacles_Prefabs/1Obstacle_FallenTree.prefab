@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 400034}
   - component: {fileID: 11474726}
   m_Layer: 12
-  m_Name: Obstacle_FallenTree
+  m_Name: 1Obstacle_FallenTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
