@@ -553,4 +553,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleAreaType: 0
-  frequency: 100
+  frequency: 10
