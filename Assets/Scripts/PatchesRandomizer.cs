@@ -26,11 +26,12 @@ private int iCurrentPNum = 1;//number of patches generated
 
 //script references
 private InGameScript hInGameScript;
-private ElementsGenerator hElementsGenerator;
+//private ElementsGenerator hElementsGenerator;
 private CheckPointsMain hCheckPointsMain;
 
 //get the current path length
-public float getCoveredDistance (){ return fPreviousTotalDistance; } 
+public float getCoveredDistance ()
+{ return fPreviousTotalDistance; } 
 
 void Start (){
 	iCurrentPNum = 1;	
@@ -38,7 +39,7 @@ void Start (){
 	
 	hInGameScript = this.GetComponent<InGameScript>() as InGameScript;
 	hCheckPointsMain = GetComponent<CheckPointsMain>() as CheckPointsMain;
-	hElementsGenerator = this.GetComponent<ElementsGenerator>() as ElementsGenerator;
+	//hElementsGenerator = this.GetComponent<ElementsGenerator>() as ElementsGenerator;
 	
 	instantiateStartPatch();	
 	goPreviousPatch = goCurrentPatch;	
@@ -73,7 +74,7 @@ public void createNewPatch (){
 	
 	fPreviousTotalDistance += CheckPointsMain.fPathLength;
 	
-	hElementsGenerator.generateElements();	//generate obstacles on created patch
+	//hElementsGenerator.generateElements();	//generate obstacles on created patch
 }
 
 private void instantiateNextPatch (){	
