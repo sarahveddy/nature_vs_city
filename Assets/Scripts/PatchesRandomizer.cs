@@ -54,7 +54,7 @@ void Update (){
 	if(hInGameScript.isGamePaused()==true)
 		return;
 	
-	if(tPlayer.position.x>(iCurrentPNum*fPatchDistance)+100.0f)
+	if(tPlayer.position.x>(iCurrentPNum*fPatchDistance)+100.0f) 
 	{
 		Destroy(goPreviousPatch);
 		iCurrentPNum++;
