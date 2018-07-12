@@ -139,12 +139,13 @@ private Vector3 Interp ( Vector3[] pts  ,   float t  ){
 	Vector3 c = pts[currPt + 2];
 	Vector3 d = pts[currPt + 3];
 	
-	return .5f * (
+	Vector3 vectorPostition = .5f * (
 		(-a + 3f * b - 3f * c + d) * (u * u * u)
 		+ (2f * a - 5f * b + 4f * c - d) * (u * u)
 		+ (-a + c) * u
 		+ 2f * b
 	);
+	return vectorPostition; 
 }
 
 /*
