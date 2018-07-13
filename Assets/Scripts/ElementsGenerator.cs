@@ -58,11 +58,6 @@ public void generateElements (){
 }
 
 void Start (){
-//	foreach (GameObject VARIABLE in obstaclePrefabs)
-//	{
-//		Debug.Log(VARIABLE);
-//	}
-	
 	iObstacleCount = obstaclePrefabs.Length;
 	iPowerupCount = powerupPrefabs.Length;
 	iTotalCount = iObstacleCount + iPowerupCount + 1;//obstacles + powerups + currency
