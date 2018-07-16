@@ -653,7 +653,6 @@ GameObject:
   - component: {fileID: 329}
   - component: {fileID: 328}
   - component: {fileID: 327}
-  - component: {fileID: 326}
   - component: {fileID: 324}
   - component: {fileID: 323}
   m_Layer: 8
@@ -721,22 +720,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patchesPrefabs:
-  - {fileID: 1837748163176282, guid: 212f6ef33c0f44457a18b8aa99cd97c1, type: 2}
---- !u!114 &326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46010f0f90da444a6b1f64a2f9107b39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstaclePrefabs: []
-  powerupPrefabs: []
-  currencyPrefab: {fileID: 100004, guid: 5aa14576ba85d4ea995984762c527f26, type: 2}
-  otherObstaclePrefabs: []
+  - {fileID: 1856261674675352, guid: d21eec35f8688443cbac84c3632fd4ff, type: 2}
+  - {fileID: 1519323413677186, guid: 8d8fd5cea66ef41e0871922068419891, type: 2}
+  - {fileID: 1257094095157706, guid: 285aaa18de2784e4494815fd717d1962, type: 2}
+  - {fileID: 1561075369673748, guid: cb7dab19df031433d8c25a1a07fb5d9d, type: 2}
+  - {fileID: 1788679990747764, guid: e702acc810ce3433e88dae6a81922a2f, type: 2}
+  - {fileID: 1097393592485466, guid: 48d371f81aed94cc2823089c9c6f2066, type: 2}
 --- !u!114 &327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2350,7 +2339,7 @@ GameObject:
   - component: {fileID: 1426851133}
   - component: {fileID: 1426851132}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: scenelight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2366,7 +2355,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 0.9957668, g: 1, b: 0.8915094, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -2539,7 +2528,7 @@ GameObject:
   - component: {fileID: 1508333330}
   - component: {fileID: 1508333329}
   m_Layer: 0
-  m_Name: Directional Light (1)
+  m_Name: scenelight2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2555,7 +2544,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 0.9957668, g: 1, b: 0.8915094, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -2594,52 +2583,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1001 &1526418054
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4505438384980536, guid: 212f6ef33c0f44457a18b8aa99cd97c1, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4505438384980536, guid: 212f6ef33c0f44457a18b8aa99cd97c1, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4505438384980536, guid: 212f6ef33c0f44457a18b8aa99cd97c1, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4505438384980536, guid: 212f6ef33c0f44457a18b8aa99cd97c1, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4505438384980536, guid: 212f6ef33c0f44457a18b8aa99cd97c1, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4505438384980536, guid: 212f6ef33c0f44457a18b8aa99cd97c1, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4505438384980536, guid: 212f6ef33c0f44457a18b8aa99cd97c1, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4505438384980536, guid: 212f6ef33c0f44457a18b8aa99cd97c1, type: 2}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 1837748163176282, guid: 212f6ef33c0f44457a18b8aa99cd97c1, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 212f6ef33c0f44457a18b8aa99cd97c1, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1540279981
 GameObject:
   m_ObjectHideFlags: 0
