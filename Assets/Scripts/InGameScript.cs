@@ -50,6 +50,8 @@ void Start (){
 	
 	bGameOver = false;
 	bGamePaused = true;
+	
+
 }//end of Start
 
 void Update (){	

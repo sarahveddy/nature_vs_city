@@ -57,6 +57,11 @@ public void generateElements (){
 	bGenerateElements = true;
 }
 
+//MYCODE for making forest and city elements at one time
+public GameObject[] otherObstaclePrefabs; 
+private Element[] otherElements;
+private Transform otherTprefabHandlesParent; 
+
 void Start (){
 //	foreach (GameObject VARIABLE in obstaclePrefabs)
 //	{
@@ -370,61 +375,121 @@ private int getRandomElement (){
 *	CALLED BY: Start()
 */
 private void setPrefabHandlers (){
-	tPrefabHandlesParent = GameObject.Find("PFHandlesGroup").transform;//get the transfrom of the parent of all clones
-	elements = new Element[iTotalCount];
-    
-	//Obstacles
-
-    int i = 0;
-    int j = 0;
-    //Initialization of all the elements
-    for ( i = 0; i < elements.Length; i++)
-    {
-        elements[i] = new Element();
-    }
-    for ( i = 0; i< iObstacleCount; i++)
-	{		
-       	elements[i].iFrequency = (obstaclePrefabs[i].GetComponent<ObstacleScript>() as ObstacleScript).frequency;//get the occurance frequency of the particular obstacle
-		elements[i].tPrefabHandle = new Transform[elements[i].iFrequency*4 + 1];	//allocate memory to element prefabs handler array
-		elements[i].iPrefabHandleIndex = 0;
-		elements[i].elementType = (obstaclePrefabs[i].GetComponent<ObstacleScript>() as ObstacleScript).obstacleAreaType;	//set the element type
-		
-		//generate obstacle clones
-        for ( j = 0; j<elements[i].tPrefabHandle.Length; j++)
-		{
-                elements[i].tPrefabHandle[j] = (Instantiate(obstaclePrefabs[i],new Vector3(-100,0,0),Quaternion.identity) as GameObject).transform;
-			elements[i].tPrefabHandle[j].parent = tPrefabHandlesParent;
-		}		
-	}
+//	tPrefabHandlesParent = GameObject.Find("PFHandlesGroup").transform;//get the transfrom of the parent of all clones
+//
+//	otherTprefabHandlesParent = GameObject.Find("OtherPrefabs").transform; 
+//	
+//	elements = new Element[iTotalCount];
+//	otherElements = new Element[iTotalCount];
+//    
+//	//Obstacles
+//
+//    int i = 0;
+//    int j = 0;
+//    //Initialization of all the elements
+//    for ( i = 0; i < elements.Length; i++)
+//    {
+//        elements[i] = new Element();
+//	   
+//	    otherElements[i] = new Element();//MYCODE
+//	    
+//	   
+//    }
+//    for ( i = 0; i< iObstacleCount; i++)
+//	{		
+//       	elements[i].iFrequency = (obstaclePrefabs[i].GetComponent<ObstacleScript>() as ObstacleScript).frequency;//get the occurance frequency of the particular obstacle
+//		elements[i].tPrefabHandle = new Transform[elements[i].iFrequency*4 + 1]; //allocate memory to element prefabs handler array
+//		elements[i].iPrefabHandleIndex = 0;
+//		elements[i].elementType = (obstaclePrefabs[i].GetComponent<ObstacleScript>() as ObstacleScript).obstacleAreaType;	//set the element type
+//
+//		//MYCODE
+////		otherElements[i].iFrequency = elements[i].iFrequency;
+////		otherElements[i].tPrefabHandle = new Transform[otherElements[i].iFrequency * 4 + 1]; 
+////		otherElements[i].iPrefabHandleIndex = 0;
+////		otherElements[i].elementType =
+////			(otherObstaclePrefabs[i].GetComponent<ObstacleScript>() as ObstacleScript).obstacleAreaType; 
+//		
+//		//generate obstacle clones
+//        for ( j = 0; j<elements[i].tPrefabHandle.Length; j++)
+//		{
+//			
+//            elements[i].tPrefabHandle[j] = (Instantiate(obstaclePrefabs[i],new Vector3(-100,0,0),Quaternion.identity) as GameObject).transform;
+//			elements[i].tPrefabHandle[j].parent = tPrefabHandlesParent;
+//
+//			//MYCODE
+////			otherElements[i].tPrefabHandle[j] = (Instantiate(otherObstaclePrefabs[i], new Vector3(-100, 0, 0), Quaternion.identity) as GameObject).transform;
+////			otherElements[i].tPrefabHandle[j].parent = otherTprefabHandlesParent; 
+//		}		
+//	}
+//	
+//	///MYCODE - DEBUG CODE ALDKFJLSDKJFLKS
+////	for (int k = 0; k < elements.Length; k++)
+////	{
+////		Debug.Log("E : "+elements[k].elementType);
+////		Debug.Log("O : "+otherElements[k].elementType);
+////		for (int l = 0; l < elements[k].tPrefabHandle.Length; l++)
+////		{
+////			Debug.Log("E : "+elements[k].tPrefabHandle[l]);
+////			Debug.Log(otherElements[k].tPrefabHandle[l]);
+////		}
+////			
+////			//Debug.Log(otherElements[k].elementType);
+////	}
+//
+//	
+//	
+//	//Powerups
+//	int index = 0;
+//	for ( i=iObstacleCount; i<(iPowerupCount+iObstacleCount); i++)
+//	{		
+//		elements[i].iFrequency = (powerupPrefabs[index].GetComponent<PowerupScript>() as PowerupScript).frequency;
+//		elements[i].tPrefabHandle = new Transform[elements[i].iFrequency*1 + 1];
+//		elements[i].iPrefabHandleIndex = 0;
+//		elements[i].elementType = ElementType.Powerup;
+//		
+//		//MYCODE
+////		otherElements[i].iFrequency = (powerupPrefabs[index].GetComponent<PowerupScript>() as PowerupScript).frequency;
+////		otherElements[i].tPrefabHandle = new Transform[otherElements[i].iFrequency*1 + 1];
+////		otherElements[i].iPrefabHandleIndex = 0;
+////		otherElements[i].elementType = ElementType.Powerup;
+//		
+//		for ( j=0; j<elements[i].tPrefabHandle.Length; j++)
+//		{
+//            elements[i].tPrefabHandle[j] = (Instantiate(powerupPrefabs[index],new Vector3(-100,0,0),Quaternion.identity) as GameObject).transform;
+//			elements[i].tPrefabHandle[j].parent = tPrefabHandlesParent;
+//			
+//			//MYCODE
+////			otherElements[i].tPrefabHandle[j] = (Instantiate(powerupPrefabs[index],new Vector3(-100,0,0),Quaternion.identity) as GameObject).transform;
+////			otherElements[i].tPrefabHandle[j].parent = otherTprefabHandlesParent; 
+//		}
+//		
+//		++index;		
+//	}
+//	
+//	//Currency
+//	index = iPowerupCount+iObstacleCount;
+//	elements[index].iFrequency = (currencyPrefab.GetComponent<PowerupScript>() as PowerupScript).frequency;
+//	elements[index].tPrefabHandle = new Transform[elements[i].iFrequency*11 + 1];
+//	elements[index].iPrefabHandleIndex = 0;
+//	elements[index].elementType = ElementType.Currency;
+//	
+//	//MYCODE
+////	otherElements[index].iFrequency = (currencyPrefab.GetComponent<PowerupScript>() as PowerupScript).frequency;
+////	otherElements[index].tPrefabHandle = new Transform[otherElements[i].iFrequency*11 + 1];
+////	otherElements[index].iPrefabHandleIndex = 0;
+////	otherElements[index].elementType = ElementType.Currency;
+//	
+//	
+//	for ( j=0; j<elements[index].tPrefabHandle.Length; j++)
+//	{
+//		elements[index].tPrefabHandle[j] = (Instantiate(currencyPrefab,new Vector3(-100,0,0),Quaternion.identity)as GameObject).transform;
+//		elements[index].tPrefabHandle[j].parent = tPrefabHandlesParent;
+//		
+//		
+//		//MYCODE
+////		otherElements[index].tPrefabHandle[j] = (Instantiate(currencyPrefab,new Vector3(-100,0,0),Quaternion.identity)as GameObject).transform;
+////		otherElements[index].tPrefabHandle[j].parent = otherTprefabHandlesParent;
+//	}
 	
-	//Powerups
-	int index = 0;
-	for ( i=iObstacleCount; i<(iPowerupCount+iObstacleCount); i++)
-	{		
-		elements[i].iFrequency = (powerupPrefabs[index].GetComponent<PowerupScript>() as PowerupScript).frequency;
-		elements[i].tPrefabHandle = new Transform[elements[i].iFrequency*1 + 1];
-		elements[i].iPrefabHandleIndex = 0;
-		elements[i].elementType = ElementType.Powerup;
-		
-		for ( j=0; j<elements[i].tPrefabHandle.Length; j++)
-		{
-                elements[i].tPrefabHandle[j] = (Instantiate(powerupPrefabs[index],new Vector3(-100,0,0),Quaternion.identity) as GameObject).transform;
-			elements[i].tPrefabHandle[j].parent = tPrefabHandlesParent;
-		}
-		
-		++index;		
-	}
-	
-	//Currency
-	index = iPowerupCount+iObstacleCount;
-	elements[index].iFrequency = (currencyPrefab.GetComponent<PowerupScript>() as PowerupScript).frequency;
-	elements[index].tPrefabHandle = new Transform[elements[i].iFrequency*11 + 1];
-	elements[index].iPrefabHandleIndex = 0;
-	elements[index].elementType = ElementType.Currency;
-	for ( j=0; j<elements[index].tPrefabHandle.Length; j++)
-	{
-            elements[index].tPrefabHandle[j] = (Instantiate(currencyPrefab,new Vector3(-100,0,0),Quaternion.identity)as GameObject).transform;
-		elements[index].tPrefabHandle[j].parent = tPrefabHandlesParent;
-	}	
 }
 }
