@@ -697,7 +697,6 @@ GameObject:
   - component: {fileID: 329}
   - component: {fileID: 328}
   - component: {fileID: 327}
-  - component: {fileID: 326}
   - component: {fileID: 324}
   - component: {fileID: 323}
   m_Layer: 8
@@ -765,31 +764,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patchesPrefabs:
-  - {fileID: 100034, guid: cbe4c0c3426df410fa9047eb3e5ff3fc, type: 2}
-  - {fileID: 100052, guid: 63816282505da4d22bf417fdb81e3373, type: 2}
-  - {fileID: 100034, guid: 77daeecb99f6a4fc38a61cf74ec5a84b, type: 2}
---- !u!114 &326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46010f0f90da444a6b1f64a2f9107b39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstaclePrefabs:
-  - {fileID: 100034, guid: a327ae820daeb467599fed914540b820, type: 2}
-  - {fileID: 100002, guid: 334ab5e753cb44aa2b4ea30f81bddab6, type: 2}
-  - {fileID: 100002, guid: c9b0e5fba297d4e48b1ca84fe4f71bad, type: 2}
-  - {fileID: 100000, guid: a87ca04aefda946f8a7e738f9966e4a6, type: 2}
-  - {fileID: 100000, guid: 14cd1109d6828483fba2a36df8974cf7, type: 2}
-  - {fileID: 100002, guid: 1cfbf017387004f7ab895ed055fd16bd, type: 2}
-  - {fileID: 100004, guid: 14cec14fdfb594ec18a7dadc2e2dce60, type: 2}
-  powerupPrefabs:
-  - {fileID: 100000, guid: 5f317cbbd24c54501a7788776c001d85, type: 2}
-  currencyPrefab: {fileID: 100004, guid: 5aa14576ba85d4ea995984762c527f26, type: 2}
+  - {fileID: 1837748163176282, guid: 212f6ef33c0f44457a18b8aa99cd97c1, type: 2}
+  - {fileID: 1851852962703082, guid: 5feec3853025a4550ad28bdec23ea280, type: 2}
+  - {fileID: 1927954406044272, guid: 84f3673722695417eb71536a0ce2c1c6, type: 2}
+  - {fileID: 1833402033376982, guid: 67bd51f1368004aae91c12276b3da0c7, type: 2}
+  - {fileID: 1110756078654240, guid: 18c3704e27c07456491f43b27bf642eb, type: 2}
+  - {fileID: 1730424143356750, guid: 44b9e2a6607214fcb8fd478ca4de92c0, type: 2}
 --- !u!114 &327
 MonoBehaviour:
   m_ObjectHideFlags: 0

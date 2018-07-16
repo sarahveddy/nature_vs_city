@@ -31,7 +31,7 @@ private int iMenuStatus;
 private bool  bGameOver = false;
 private bool  bGamePaused = false;
 
-//private bool gamePlayStart = false; 
+private bool gamePlayStart = false; 
 
 void Start (){
 	Application.targetFrameRate = 60;		//ceiling the frame rate on 60 (debug only)
@@ -50,6 +50,7 @@ void Start (){
 	
 	bGameOver = false;
 	bGamePaused = true;
+	
 }//end of Start
 
 void Update (){	

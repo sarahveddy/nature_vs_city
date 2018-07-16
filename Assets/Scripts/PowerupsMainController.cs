@@ -118,7 +118,7 @@ public void collectedPowerup ( int index  ){
 *	CALLED BY:	collectedPowerup()
 */
 private void activatePowerUp ( int index  ){
-        tHUDPUMeter.transform.position =new Vector3(tHUDPUMeter.transform.position.x, -88.6f,tHUDPUMeter.transform.position.z);//dispaly power-up meter
+    tHUDPUMeter.transform.position =new Vector3(tHUDPUMeter.transform.position.x, -88.6f,tHUDPUMeter.transform.position.z);//dispaly power-up meter
 	bPowerupStatus[index] = true;
 		
     if(index == (int) PowerUps.Magnetism)//Magnetism Powerup

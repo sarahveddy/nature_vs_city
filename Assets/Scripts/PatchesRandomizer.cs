@@ -73,7 +73,7 @@ public void createNewPatch (){
 	
 	fPreviousTotalDistance += CheckPointsMain.fPathLength;
 	
-	hElementsGenerator.generateElements();	//generate obstacles on created patch
+	//hElementsGenerator.generateElements();	//generate obstacles on created patch
 }
 
 private void instantiateNextPatch (){	
