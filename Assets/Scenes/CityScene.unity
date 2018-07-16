@@ -726,6 +726,7 @@ MonoBehaviour:
   - {fileID: 1561075369673748, guid: cb7dab19df031433d8c25a1a07fb5d9d, type: 2}
   - {fileID: 1788679990747764, guid: e702acc810ce3433e88dae6a81922a2f, type: 2}
   - {fileID: 1097393592485466, guid: 48d371f81aed94cc2823089c9c6f2066, type: 2}
+  presetPatchOrder: 000000000100000002000000030000000400000005000000
 --- !u!114 &327
 MonoBehaviour:
   m_ObjectHideFlags: 0

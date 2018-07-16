@@ -96,7 +96,7 @@ private void instantiateStartPatch (){
 private int patchIndexSelector()
 {
 	patchOrderIndex++;
-	if(patchOrderIndex>presetPatchOrder.Length)
+	if(patchOrderIndex>presetPatchOrder.Length-1)
 	{
 		patchOrderIndex = 0; 
 	}

@@ -39,7 +39,7 @@ public void initPowerupScript (){
 	StartTime = 0.0f;
 	v3DistanceVector = new Vector3(0,0,0);
 	
-	toggleMeshRender(true);
+	//toggleMeshRender(true);
 }
 
 void Start (){
@@ -123,7 +123,7 @@ private void toggleMeshRender ( bool bState  ){
 	}
         else if (powerupType == PowerupsMainController.PowerUps.Magnetism)
 	{		
-		(this.transform.Find("Center").GetComponent<MeshRenderer>() as MeshRenderer).enabled = bState;
+//		(this.transform.Find("Center").GetComponent<MeshRenderer>() as MeshRenderer).enabled = bState;
 	}
 }
 }
