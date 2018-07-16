@@ -245,7 +245,7 @@ void Update (){
 			mPressedLast = false;
 			nPressedLast = true;
 			lastKeyPress = Time.time;
-			Debug.Log(lastKeyPress);
+			//Debug.Log(lastKeyPress);
 		}
 	}
 
@@ -256,7 +256,7 @@ void Update (){
 			nPressedLast = false;
 			mPressedLast = true;
 			lastKeyPress = Time.time;
-			Debug.Log(lastKeyPress);
+			//Debug.Log(lastKeyPress);
 		}
 	}
 	

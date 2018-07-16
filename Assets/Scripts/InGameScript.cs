@@ -67,7 +67,7 @@ void Update (){
 		if (PersistentManagerScript.Instance.gameplayStart == 0.0)
 		{
 			PersistentManagerScript.Instance.gameplayStart = Time.realtimeSinceStartup; 
-			Debug.Log("GAMEPLAY START : "+ PersistentManagerScript.Instance.gameplayStart.ToString()); 
+			//Debug.Log("GAMEPLAY START : "+ PersistentManagerScript.Instance.gameplayStart.ToString()); 
 		}
 	else if (iMenuStatus == 1)//display main menu and pause game
 	{

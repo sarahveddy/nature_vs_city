@@ -29,6 +29,10 @@ private InGameScript hInGameScript;
 private ElementsGenerator hElementsGenerator;
 private CheckPointsMain hCheckPointsMain;
 
+
+public int[] presetPatchOrder =  {0, 1, 2, 3, 4, 5};
+private int patchOrderIndex = 0; 
+
 //get the current path length
 public float getCoveredDistance (){ return fPreviousTotalDistance; } 
 
@@ -77,7 +81,7 @@ public void createNewPatch (){
 }
 
 private void instantiateNextPatch (){	
-        goNextPatch = Instantiate(patchesPrefabs[Random.Range(0,patchesPrefabs.Length)],new Vector3(fPatchDistance*(iCurrentPNum+1),0,0),Quaternion.identity) as GameObject;
+        goNextPatch = Instantiate(patchesPrefabs[patchIndexSelector()],new Vector3(fPatchDistance*(iCurrentPNum+1),0,0),Quaternion.identity) as GameObject;
 }
 
 /*
@@ -85,8 +89,21 @@ private void instantiateNextPatch (){
 *	CALLED BY: Start()
 */
 private void instantiateStartPatch (){
-        goCurrentPatch = Instantiate(patchesPrefabs[Random.Range(0,patchesPrefabs.Length)], new Vector3(0,0,0),Quaternion.identity) as GameObject;
-        goNextPatch = Instantiate(patchesPrefabs[Random.Range(0,patchesPrefabs.Length)],new Vector3(fPatchDistance,0,0),Quaternion.identity) as GameObject;
+        goCurrentPatch = Instantiate(patchesPrefabs[patchIndexSelector()], new Vector3(0,0,0),Quaternion.identity) as GameObject;
+        goNextPatch = Instantiate(patchesPrefabs[patchIndexSelector()],new Vector3(fPatchDistance,0,0),Quaternion.identity) as GameObject;
+}
+
+private int patchIndexSelector()
+{
+	patchOrderIndex++;
+	if(patchOrderIndex>presetPatchOrder.Length)
+	{
+		patchOrderIndex = 0; 
+	}
+
+	Debug.Log("*********************"+presetPatchOrder[patchOrderIndex]);
+	
+	return presetPatchOrder[patchOrderIndex];
 }
 
 public GameObject getCurrentPatch (){ return goCurrentPatch; }
