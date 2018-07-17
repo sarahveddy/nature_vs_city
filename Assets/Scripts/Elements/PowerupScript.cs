@@ -116,14 +116,14 @@ void Update (){
 *	FUNCTION: Make the object invisible
 */
 private void toggleMeshRender ( bool bState  ){
-        if (powerupType == PowerupsMainController.PowerUps.Currency)
-	{
-		(this.transform.Find("A_Crystal").GetComponent<MeshRenderer>() as MeshRenderer).enabled = bState;
-		(this.transform.Find("Shadow").GetComponent<MeshRenderer>() as MeshRenderer).enabled = bState;
-	}
-        else if (powerupType == PowerupsMainController.PowerUps.Magnetism)
-	{		
-//		(this.transform.Find("Center").GetComponent<MeshRenderer>() as MeshRenderer).enabled = bState;
-	}
+//        if (powerupType == PowerupsMainController.PowerUps.Currency)
+//	{
+//		(this.transform.Find("A_Crystal").GetComponent<MeshRenderer>() as MeshRenderer).enabled = bState;
+//		(this.transform.Find("Shadow").GetComponent<MeshRenderer>() as MeshRenderer).enabled = bState;
+//	}
+//        else if (powerupType == PowerupsMainController.PowerUps.Magnetism)
+//	{		
+////		(this.transform.Find("Center").GetComponent<MeshRenderer>() as MeshRenderer).enabled = bState;
+//	}
 }
 }
