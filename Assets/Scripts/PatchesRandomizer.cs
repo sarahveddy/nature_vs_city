@@ -101,7 +101,7 @@ private int patchIndexSelector()
 		patchOrderIndex = 0; 
 	}
 
-	Debug.Log("*********************"+presetPatchOrder[patchOrderIndex]);
+	//Debug.Log("*********************"+presetPatchOrder[patchOrderIndex]);
 	
 	return presetPatchOrder[patchOrderIndex];
 }

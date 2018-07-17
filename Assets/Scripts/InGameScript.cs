@@ -31,7 +31,9 @@ private int iMenuStatus;
 private bool  bGameOver = false;
 private bool  bGamePaused = false;
 
-private bool gamePlayStart = false; 
+private bool gamePlayStart = false;
+
+public float quitButtonTime = 60 * 5; 
 
 void Start (){
 	Application.targetFrameRate = 60;		//ceiling the frame rate on 60 (debug only)
@@ -57,18 +59,22 @@ void Update (){
 //	Debug.Log("menu "+iMenuStatus);
 //	Debug.Log("pause "+iPauseStatus);
 //	Debug.Log("death "+iDeathStatus);
-	if (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart > 30.00)
+	if (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart > quitButtonTime)
 	{
 		hControllerScript.tQuitButton.gameObject.active = true; 
 		//Debug.Log("5 MIN HAVE PASSED!!!");
 	}
 	
-	if (iMenuStatus == 0)	//normal gameplay
+	
+	if (iMenuStatus == 0)//normal gameplay
+	{
 		if (PersistentManagerScript.Instance.gameplayStart == 0.0)
 		{
 			PersistentManagerScript.Instance.gameplayStart = Time.realtimeSinceStartup; 
-			//Debug.Log("GAMEPLAY START : "+ PersistentManagerScript.Instance.gameplayStart.ToString()); 
 		}
+		//Debug.Log("GAMEPLAY START : "+ PersistentManagerScript.Instance.gameplayStart.ToString()); 		
+	}		
+		
 	else if (iMenuStatus == 1)//display main menu and pause game
 	{
 		hMenuScript.setMenuScriptStatus(true);
@@ -77,12 +83,17 @@ void Update (){
 		iMenuStatus = 2;
 	}
 	
+	
+	
 	//Pause GamePlay
-	if(iPauseStatus==0)	//normal gameplay
+	if (iPauseStatus == 0)//normal gameplay
+	{
 		;
+	}		
 	else if(iPauseStatus==1)//pause game
 	{	
-		hMenuScript.setMenuScriptStatus(true);		
+		//Debug.Log("***** PAUSE ******");
+		hMenuScript.setMenuScriptStatus(true);
 		hMenuScript.displayPauseMenu();
 		
 		iPauseStatus = 2;
@@ -94,6 +105,8 @@ void Update (){
 		
 		iPauseStatus = 0;
 	}
+	
+	
 	
 	if(iDeathStatus==0)	//normal gameplay
 		;
@@ -113,6 +126,8 @@ void Update (){
 	
 	if (bGamePaused == true)
 		return;
+	
+	
 	
 }//end of Update()
 
