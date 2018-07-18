@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 7cc98f368ebcc40a3b3f5af51f7ba102
 ModelImporter:
-  serializedVersion: 19
+  serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     100002: scurity_guard_rig_Ankle_L
@@ -209,26 +209,54 @@ ModelImporter:
     9500000: //RootNode
     11100000: //RootNode
     13700000: scurity_guard_rig_polySurface13
+    2186277476908879412: ImportLogs
+  externalObjects: {}
   materials:
     importMaterials: 0
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: "Avatar Rig Configuration mis-match. Inbetween bone rotation
+      in configuration does not match rotation in animation file:\n\t'scurity_guard_rig_HipPart2_L'
+      : rotation error = 0.194546 deg\n"
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'scurity_guard_rig_Scapula_R' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'scurity_guard_rig_ShoulderPart2_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'scurity_guard_rig_ElbowPart1_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'scurity_guard_rig_Wrist_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'scurity_guard_rig_Cup_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'scurity_guard_rig_NeckPart1_M'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'scurity_guard_rig_NeckPart2_M'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'scurity_guard_rig_Scapula_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'scurity_guard_rig_ShoulderPart2_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'scurity_guard_rig_ElbowPart1_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'scurity_guard_rig_Wrist_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'scurity_guard_rig_Cup_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'scurity_guard_rig_Hip_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'scurity_guard_rig_HipPart2_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'scurity_guard_rig_Hip_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'scurity_guard_rig_HipPart2_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: Idle_1
@@ -460,13 +488,18 @@ ModelImporter:
     globalScale: 1
     meshCompression: 1
     addColliders: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -476,9 +509,11 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 2
     tangentImportMode: 2
+    normalCalculationMode: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -489,7 +524,10 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 1
   humanoidOversampling: 1

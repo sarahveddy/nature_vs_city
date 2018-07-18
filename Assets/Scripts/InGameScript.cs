@@ -33,7 +33,8 @@ private bool  bGamePaused = false;
 
 private bool gamePlayStart = false;
 
-public float quitButtonTime = 60 * 5; 
+public float quitButtonTime = 60 * 5;
+public float quitGameTime = 60 * 15; 
 
 void Start (){
 	Application.targetFrameRate = 60;		//ceiling the frame rate on 60 (debug only)
@@ -62,17 +63,20 @@ void Update (){
 	if (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart > quitButtonTime)
 	{
 		hControllerScript.tQuitButton.gameObject.active = true; 
-		//Debug.Log("5 MIN HAVE PASSED!!!");
+		Debug.Log("****QUIT BUTTON*******");
 	}
-	
-	
+	if (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart > quitGameTime)
+	{
+		Debug.Log("*********QUIT**********");
+		Quit();
+	}
 	if (iMenuStatus == 0)//normal gameplay
 	{
 		if (PersistentManagerScript.Instance.gameplayStart == 0.0)
 		{
 			PersistentManagerScript.Instance.gameplayStart = Time.realtimeSinceStartup; 
 		}
-		//Debug.Log("GAMEPLAY START : "+ PersistentManagerScript.Instance.gameplayStart.ToString()); 		
+		Debug.Log("GAMEPLAY START : "+ PersistentManagerScript.Instance.gameplayStart.ToString()); 		
 	}		
 		
 	else if (iMenuStatus == 1)//display main menu and pause game
@@ -229,6 +233,16 @@ void OnApplicationPause ( bool pause  ){
 		}
 	}	
 }
+	
+public void Quit()
+{
+	#if UNITY_EDITOR
+	UnityEditor.EditorApplication.isPlaying = false; 
+	#else
+	Application.Quit(); 
+	#endif
+}
+	
 public bool isGamePaused (){ return bGamePaused; }
 public int getLevelScore (){ return iLevelScore; }
 public void incrementLevelScore ( int iValue  ){ iLevelScore += iValue; }

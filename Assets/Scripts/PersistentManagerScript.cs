@@ -12,7 +12,7 @@ using UnityEngine;
 
 public class PersistentManagerScript : MonoBehaviour
 {
-	public float gameplayStart = 0.0f; 
+	public float gameplayStart = -10000000.0f; 
 	
 	public static PersistentManagerScript Instance
 	{

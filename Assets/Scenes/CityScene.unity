@@ -429,7 +429,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 47}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 23e45ce86de174a2f834f23a04d9659a, type: 3}
@@ -787,7 +787,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a7914392c8ef40078b63444b30e1dd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quitButtonTime: 300
+  quitButtonTime: 30
+  quitGameTime: 500
 --- !u!114 &332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2161,7 +2162,7 @@ Transform:
   m_GameObject: {fileID: 1422820824}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.07, y: -3.89, z: 0}
-  m_LocalScale: {x: 5.2, y: 1.35, z: 1}
+  m_LocalScale: {x: 5.069999, y: 1.35, z: 1}
   m_Children: []
   m_Father: {fileID: 1950961890}
   m_RootOrder: 1
@@ -2732,8 +2733,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1798811589}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.58, y: -3.25, z: -1}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
+  m_LocalPosition: {x: -20.2, y: -3.9, z: -1}
+  m_LocalScale: {x: 1.4268101, y: 1.4268103, z: 1.2971002}
   m_Children: []
   m_Father: {fileID: 1950961890}
   m_RootOrder: 2
