@@ -253,6 +253,8 @@ void OnApplicationPause ( bool pause  ){
 	
 public void Quit()
 {
+	float gamePlayTime = Time.timeSinceLevelLoad - PersistentManagerScript.Instance.gameplayStart - pauseTime; 
+	FindObjectOfType<Logging>().SendLog("Quit Button Pressed", gamePlayTime.ToString());
 	#if UNITY_EDITOR
 	UnityEditor.EditorApplication.isPlaying = false; 
 	#else

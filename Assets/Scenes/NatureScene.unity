@@ -831,8 +831,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a7914392c8ef40078b63444b30e1dd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quitButtonTime: 10
-  quitGameTime: 20
+  quitButtonTime: 300
+  quitGameTime: 1200
 --- !u!114 &332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1970,7 +1970,8 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11400000, guid: e8ecc48745df444a980d70e59b689c3a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e8ecc48745df444a980d70e59b689c3a, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &548629952

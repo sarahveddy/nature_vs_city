@@ -26,7 +26,7 @@ public class PersistentManagerScript : MonoBehaviour
 		if (Instance == null)
 		{
 			Instance = this; 
-			Debug.Log("*** PM Created **** "+Time.realtimeSinceStartup);
+			//Debug.Log("*** PM Created **** "+Time.realtimeSinceStartup);
 			DontDestroyOnLoad(gameObject);
 		}
 		else
