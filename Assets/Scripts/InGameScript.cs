@@ -34,7 +34,12 @@ private bool  bGamePaused = false;
 private bool gamePlayStart = false;
 
 public float quitButtonTime = 60 * 5;
-public float quitGameTime = 60 * 15; 
+public float quitGameTime = 60 * 15;
+
+	private float pauseStart = 0.0f;
+	private float pauseEnd = 0.0f;
+	private float pauseTime = 0.0f; 
+	
 
 void Start (){
 	Application.targetFrameRate = 60;		//ceiling the frame rate on 60 (debug only)
@@ -60,26 +65,28 @@ void Update (){
 //	Debug.Log("menu "+iMenuStatus);
 //	Debug.Log("pause "+iPauseStatus);
 //	Debug.Log("death "+iDeathStatus);
-	if (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart > quitButtonTime && 
-	    PersistentManagerScript.Instance.gameplayStarted)
+	if (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart - pauseTime > quitButtonTime &&
+	    PersistentManagerScript.Instance.gameplayStarted &&
+	    iPauseStatus == 0) 
 	{
 		hControllerScript.tQuitButton.gameObject.active = true; 
-		Debug.Log("****QUIT BUTTON******* "+Time.realtimeSinceStartup);
+		//Debug.Log("****QUIT BUTTON******* "+Time.realtimeSinceStartup);
 	}
-	if (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart > quitGameTime &&
-	    PersistentManagerScript.Instance.gameplayStarted)
+	if (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart - pauseTime > quitGameTime &&
+	    PersistentManagerScript.Instance.gameplayStarted &&
+	    iPauseStatus == 0)
 	{
-		Debug.Log("*********QUIT********** " +Time.realtimeSinceStartup);
+		//Debug.Log("*********QUIT********** " +Time.realtimeSinceStartup);
 		Quit();
 	}
 	if (iMenuStatus == 0)//normal gameplay
 	{
 		if (PersistentManagerScript.Instance.gameplayStart == 0.0)
 		{
-			Debug.Log("SETTING VALUES");
+			//Debug.Log("SETTING VALUES");
 			PersistentManagerScript.Instance.gameplayStart = Time.realtimeSinceStartup;
 			PersistentManagerScript.Instance.gameplayStarted = true; 
-			Debug.Log("GAMEPLAY START : "+ PersistentManagerScript.Instance.gameplayStart.ToString()); 	
+			//Debug.Log("GAMEPLAY START : "+ PersistentManagerScript.Instance.gameplayStart.ToString()); 	
 		}
 			
 	}		
@@ -101,14 +108,19 @@ void Update (){
 	}		
 	else if(iPauseStatus==1)//pause game
 	{	
-		//Debug.Log("***** PAUSE ******");
+		Debug.Log("***** PAUSE ****** "+Time.timeSinceLevelLoad);
+		pauseStart = Time.timeSinceLevelLoad; 
 		hMenuScript.setMenuScriptStatus(true);
 		hMenuScript.displayPauseMenu();
 		
 		iPauseStatus = 2;
+		
 	}
 	else if(iPauseStatus==3)//resume game
-	{		
+	{	Debug.Log("***** RESUME ****** "+Time.timeSinceLevelLoad);
+		pauseEnd = Time.timeSinceLevelLoad;
+
+		pauseTime += (pauseEnd - pauseStart); 
 		bGamePaused = false;		
 		hMenuScript.setMenuScriptStatus(false);
 		
