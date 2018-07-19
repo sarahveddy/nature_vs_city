@@ -60,23 +60,28 @@ void Update (){
 //	Debug.Log("menu "+iMenuStatus);
 //	Debug.Log("pause "+iPauseStatus);
 //	Debug.Log("death "+iDeathStatus);
-	if (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart > quitButtonTime)
+	if (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart > quitButtonTime && 
+	    PersistentManagerScript.Instance.gameplayStarted)
 	{
 		hControllerScript.tQuitButton.gameObject.active = true; 
-		Debug.Log("****QUIT BUTTON*******");
+		Debug.Log("****QUIT BUTTON******* "+Time.realtimeSinceStartup);
 	}
-	if (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart > quitGameTime)
+	if (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart > quitGameTime &&
+	    PersistentManagerScript.Instance.gameplayStarted)
 	{
-		Debug.Log("*********QUIT**********");
+		Debug.Log("*********QUIT********** " +Time.realtimeSinceStartup);
 		Quit();
 	}
 	if (iMenuStatus == 0)//normal gameplay
 	{
 		if (PersistentManagerScript.Instance.gameplayStart == 0.0)
 		{
-			PersistentManagerScript.Instance.gameplayStart = Time.realtimeSinceStartup; 
+			Debug.Log("SETTING VALUES");
+			PersistentManagerScript.Instance.gameplayStart = Time.realtimeSinceStartup;
+			PersistentManagerScript.Instance.gameplayStarted = true; 
+			Debug.Log("GAMEPLAY START : "+ PersistentManagerScript.Instance.gameplayStart.ToString()); 	
 		}
-		Debug.Log("GAMEPLAY START : "+ PersistentManagerScript.Instance.gameplayStart.ToString()); 		
+			
 	}		
 		
 	else if (iMenuStatus == 1)//display main menu and pause game

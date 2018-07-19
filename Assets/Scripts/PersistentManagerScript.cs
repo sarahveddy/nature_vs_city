@@ -12,7 +12,8 @@ using UnityEngine;
 
 public class PersistentManagerScript : MonoBehaviour
 {
-	public float gameplayStart = -10000000.0f; 
+	public float gameplayStart = 0.0f;
+	public bool gameplayStarted = false; 
 	
 	public static PersistentManagerScript Instance
 	{
@@ -25,6 +26,7 @@ public class PersistentManagerScript : MonoBehaviour
 		if (Instance == null)
 		{
 			Instance = this; 
+			Debug.Log("*** PM Created **** "+Time.realtimeSinceStartup);
 			DontDestroyOnLoad(gameObject);
 		}
 		else

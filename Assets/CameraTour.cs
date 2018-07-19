@@ -24,7 +24,7 @@ public class CameraTour : MonoBehaviour {
 	{
 		float step = speed * Time.deltaTime;
 		transform.position = Vector3.MoveTowards(transform.position, go.transform.position, step); 
-		if (Time.timeSinceLevelLoad - startTime > 10)
+		if (Time.timeSinceLevelLoad - startTime > 60)
 		{
 			transform.position = originalLoc;
 			startTime = Time.time; 
