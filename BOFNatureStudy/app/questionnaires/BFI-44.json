@@ -1,0 +1,200 @@
+{
+   "title":"BFI-44 - actual self",
+   "instructions":"Reflect on the characteristics you see yourself having generally - <b>the type of person you are</b>. Below are a number of characteristics that may or may not apply to yourself. Please indicate next to each statement the extent to which you agree or disagree with each statement.",
+   "code":"",
+   "questions":[
+      {
+         "questiontype":"radiogrid",
+         "id":"radio_1",
+         "shuffle": "true",
+         "labels":[
+            "Disagree strongly",
+            "Disagree moderately",
+            "Disagree a little",
+            "Neither agree nor disagree",
+            "Agree a little",
+            "Agree moderately",
+            "Agree strongly"
+         ],
+         "q_text":[
+            {
+               "id":"bfi_AS_01",
+               "text":"Is talkative."
+            },
+            {
+               "id":"bfi_AS_02",
+               "text":"Tends to find fault with others."
+            },
+            {
+               "id":"bfi_AS_03",
+               "text":"Does a thorough job."
+            },
+            {
+               "id":"bfi_AS_04",
+               "text":"Is depressed, blue."
+            },
+            {
+               "id":"bfi_AS_05",
+               "text":"Is original, comes up with new ideas."
+            },
+            {
+               "id":"bfi_AS_06",
+               "text":"Is reserved."
+            },
+            {
+               "id":"bfi_AS_07",
+               "text":"Is helpful and unselfish with others."
+            },
+            {
+               "id":"bfi_AS_08",
+               "text":"Can be somewhat careless."
+            },
+            {
+               "id":"bfi_AS_09",
+               "text":"Is relaxed, handles stress well."
+            },
+            {
+               "id":"bfi_AS_10",
+               "text":"Is curious about many different things."
+            },
+            {
+               "id":"bfi_AS_11",
+               "text":"Is full of energy."
+            },
+            {
+               "id":"bfi_AS_12",
+               "text":"Starts quarrels with others."
+            },
+            {
+               "id":"bfi_AS_13",
+               "text":"Is a reliable worker."
+            },
+            {
+               "id":"bfi_AS_14",
+               "text":"Can be tense."
+            },
+            {
+               "id":"bfi_AS_15",
+               "text":"Is ingenious, a deep thinker."
+            },
+            {
+               "id":"bfi_AS_16",
+               "text":"Generates a lot of enthusiasm."
+            },
+            {
+               "id":"bfi_AS_17",
+               "text":"Has a forgiving nature."
+            },
+            {
+               "id":"bfi_AS_18",
+               "text":"Tends to be disorganized."
+            },
+            {
+               "id":"bfi_AS_19",
+               "text":"Worries a lot."
+            },
+            {
+               "id":"bfi_AS_20",
+               "text":"Has an active imagination."
+            },
+            {
+               "id":"bfi_AS_21",
+               "text":"Tends to be quiet."
+            },
+            {
+               "id":"bfi_AS_22",
+               "text":"Is generally trusting."
+            },
+            {
+               "id":"bfi_AS_23",
+               "text":"Tends to be lazy."
+            },
+            {
+               "id":"bfi_AS_24",
+               "text":"Is emotionally stable, not easily upset."
+            },
+            {
+               "id":"bfi_AS_25",
+               "text":"Is inventive."
+            },
+            {
+               "id":"bfi_AS_26",
+               "text":"Has an assertive personality."
+            },
+            {
+               "id":"bfi_AS_27",
+               "text":"Can be cold and aloof."
+            },
+            {
+               "id":"bfi_AS_28",
+               "text":"Perseveres until the task is finished."
+            },
+            {
+               "id":"bfi_AS_29",
+               "text":"Can be moody."
+            },
+            {
+               "id":"bfi_AS_30",
+               "text":"Values artistic, aesthetic experiences."
+            },
+            {
+               "id":"bfi_AS_31",
+               "text":"Is sometimes shy, inhibited."
+            },
+            {
+               "id":"bfi_AS_32",
+               "text":"Is considerate and kind to almost everyone."
+            },
+            {
+               "id":"bfi_AS_33",
+               "text":"Does things efficiently."
+            },
+            {
+               "id":"bfi_AS_34",
+               "text":"Remains calm in tense situations."
+            },
+            {
+               "id":"bfi_AS_35",
+               "text":"Prefers work that is routine."
+            },
+            {
+               "id":"bfi_AS_36",
+               "text":"Is outgoing, sociable."
+            },
+            {
+               "id":"bfi_AS_37",
+               "text":"Is sometimes rude to others."
+            },
+            {
+               "id":"bfi_AS_38",
+               "text":"Makes plans and follows through with them."
+            },
+            {
+               "id":"bfi_AS_39",
+               "text":"Gets nervous easily."
+            },
+            {
+               "id":"bfi_AS_40",
+               "text":"Likes to reflect, play with ideas."
+            },
+            {
+               "id":"bfi_AS_41",
+               "text":"Has few artistic interests."
+            },
+            {
+               "id":"bfi_AS_42",
+               "text":"Likes to cooperate with others."
+            },
+            {
+               "id":"bfi_AS_43",
+               "text":"Is easily distracted."
+            },
+            {
+               "id":"bfi_AS_44",
+               "text":"Is sophisticated in art, music, or literature"
+            }
+         ]
+      }
+
+   ]
+}

@@ -1,0 +1,61 @@
+{
+   "title":"RecGames",
+   "instructions":"Please read each of the following items carefully, thinking about how it relates to your life, and then indicate your agreement to each statment.",
+   "code":"",
+   "questions":[
+     {
+        "questiontype":"slider",
+        "instructions":"I play games after an exhausting task.",
+        "id":"RecGames_1",
+        "datatype":"integer",
+        "left":"Never",
+        "right":"Very frequently",
+        "tick_count":"5"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"I play games after annoying situations (e.g. after an argument or bad news).",
+        "id":"RecGames_2",
+        "datatype":"integer",
+        "left":"Never",
+        "right":"Very frequently",
+        "tick_count":"5"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"I play games when I am under stress.",
+        "id":"RecGames_3",
+        "datatype":"integer",
+        "left":"Never",
+        "right":"Very frequently",
+        "tick_count":"5"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"I play games after school/university/work.",
+        "id":"RecGames_4",
+        "datatype":"integer",
+        "left":"Never",
+        "right":"Very frequently",
+        "tick_count":"5"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"I play games when I feel tired.",
+        "id":"RecGames_5",
+        "datatype":"integer",
+        "left":"Never",
+        "right":"Very frequently",
+        "tick_count":"5"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"I play games when I want to recover.",
+        "id":"RecGames_6",
+        "datatype":"integer",
+        "left":"Never",
+        "right":"Very frequently",
+        "tick_count":"5"
+     }
+   ]
+}

@@ -1,0 +1,144 @@
+{  
+    "title":"Demographics",
+    "instructions":"Please answer the following questions.",
+    "code":"",
+    "questions":[
+        {
+            "questiontype":"num_field",
+            "instructions":"What is your age?",
+            "decimals": 0,
+            "width": 60,
+            "min": 0,
+            "max": 100,
+            "id":"age"
+        },
+        {
+            "questiontype":"drop_down",
+            "instructions":"What is your gender?",
+            "id":"gender",
+            "dropheight":104,
+            "items":[
+                "Female",
+                "Male",
+                "Other",
+                "I prefer not to say",
+                "Other"
+            ]
+        },
+        {
+          "questiontype": "multi_field",
+          "instructions": "(Optional) If you indicated \"Other\" for the previous question, please describe here.",
+          "id": "gender_other",
+          "required": false,
+          "height": 60
+        },
+        {  
+            "questiontype":"drop_down",
+            "instructions":"What is the highest degree or level of school you have completed? If currently enrolled, mark the previous grade or highest degree received. ",
+            "id":"schooling",
+            "items":[  
+                "No schooling completed",
+                "Nursery school to 8th grade",
+                "9th, 10th, or 11th grade",
+                "12th grade, no diploma",
+                "High school graduate - high school diploma or the equivalent (for example: GED)",
+                "Some college credit, but less than 1 year",
+                "1 or more years of college, no degree",
+                "Associate degree",
+                "Bachelor's degree",
+                "Master's degree",
+                "Professional degree",
+                "Doctorate degree",
+                "I prefer not to answer"
+            ]
+        },
+       {
+            "questiontype":"field",
+            "instructions":"If you are a student, please indicate your subject.",
+            "datatype":"text",
+            "placeholder":"Subject",
+            "id":"subject"
+        },
+        {  
+            "questiontype":"drop_down",
+            "instructions":"Please indicate your employment status.",
+            "id":"employment_status",
+            "width":350,
+            "dropwidth":350,
+            "items":[  
+                "Employed for wages",
+                "Self-employed",
+                "Out of work and looking for work",
+                "Out of work but not currently looking for work",
+                "A homemaker",
+                "A student",
+                "Military",
+                "Retired",
+                "Unable to work",
+                "I prefer not to answer"
+            ]
+        },
+        {  
+            "questiontype":"drop_down",
+            "instructions":"Please indicate your marital status.",
+            "id":"marital_status",
+            "width":350,
+            "dropwidth":920,
+            "dropheight":140,
+            "items":[  
+                "Single, never married",
+                "Married or domestic partnership",
+                "Widowed",
+                "Divorced",
+                "Separated",
+                "I prefer not to answer"
+            ]
+        },
+        {
+         "questiontype":"drop_down",
+          "instructions":"Please indicate your household income.",
+          "id":"household_income",
+          "width":350,
+          "dropwidth":920,
+          "dropheight":140,
+          "items":[
+              "Less than $10,000",
+              "$10,001 to 25,000",
+              "25,001 to 45,000",
+              "45,001 to 65,000",
+              "65,001 to 85,000",
+              "85,001 to 100,000",
+              "10 001 to 150,000",
+              "150,000 or more",
+              "I prefer not to answer"
+            ]
+        },
+        {
+         "questiontype":"checklist",
+          "instructions":"I identify my ethnicity as (check all that apply):",
+          "id":"ethnicity",
+          "width":350,
+          "dropwidth":920,
+          "dropheight":140,
+          "items":[
+              "American Indian or Alaskan Native",
+              "Asian",
+              "Black or African American",
+              "First Nations, Inuit, or Metis",
+              "Hispanic/Latinx or Spanish Origin",
+              "Native Hawaiian or Other Pacific Islander",
+              "White/Caucasian",
+              "I prefer not to answer"
+              "Other"
+
+            ]
+        },
+        {
+          "questiontype": "multi_field",
+          "instructions": "(Optional) If you indicated \"Other\" for the previous question, please describe here.",
+          "id": "ethnicity_other",
+          "required": false,
+          "height": 60
+        }
+    ]
+}

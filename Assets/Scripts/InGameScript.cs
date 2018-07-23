@@ -42,7 +42,7 @@ public float quitGameTime = 60 * 15;
 	
 
 void Start (){
-	Application.targetFrameRate = 60;		//ceiling the frame rate on 60 (debug only)
+	//Application.targetFrameRate = 60;		//ceiling the frame rate on 60 (debug only)
 	
 	RenderSettings.fog = true;				//turn on fog on launch
 		
@@ -253,12 +253,16 @@ void OnApplicationPause ( bool pause  ){
 	
 public void Quit()
 {
-	float gamePlayTime = Time.timeSinceLevelLoad - PersistentManagerScript.Instance.gameplayStart - pauseTime; 
-	FindObjectOfType<Logging>().SendLog("Quit Button Pressed", gamePlayTime.ToString());
+//	Debug.Log(Application.absoluteURL);
+	string[] s = Application.absoluteURL.Split('/');
+//	Debug.Log(s[0] + "       "+ s[1]);
+	string newURL = s[0] + "/redirect_next_page";
+//	Debug.Log(newURL);
+	FindObjectOfType<Logging>().SendLog("QUIT BUTTON PRESSED", (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart - pauseTime).ToString());
 	#if UNITY_EDITOR
-	UnityEditor.EditorApplication.isPlaying = false; 
+		UnityEditor.EditorApplication.isPlaying = false; 
 	#else
-	Application.Quit(); 
+		Application.OpenURL(newURL); 
 	#endif
 }
 	

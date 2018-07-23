@@ -1,0 +1,263 @@
+{
+   "title":"DSI-58",
+   "instructions":"Please rate the degree to which each statement applies to you or your current situation, using the given scale.",
+   "code":"",
+   "questions":[
+      {
+         "questiontype":"radiogrid",
+         "id":"DSI-58",
+         "labels":[
+           "did not occur",
+           "occurred but was not stressful",
+           "caused very little stress",
+           "caused a little stress",
+           "caused some stress",
+           "caused much stress",
+           "caused very much stress",
+           "caused me to panic"
+         ],
+         "q_text":[
+            {
+            "id":"DSI-58_01",
+            "text":"Performed poorly at a task"
+            },
+            {
+            "id":"DSI-58_02",
+            "text":"Performed poorly due to others"
+            },
+            {
+            "id":"DSI-58_03",
+            "text":"Thought about unfinished work"
+            },
+            {
+            "id":"DSI-58_04",
+            "text":"Hurried to meet a deadline"
+            },
+            {
+            "id":"DSI-58_05",
+            "text":"Interrupted during task/activity"
+            },
+            {
+            "id":"DSI-58_06",
+            "text":"Someone spoiled your completed task"
+            },
+            {
+            "id":"DSI-58_07",
+            "text":"Did something you are unskilled at"
+            },
+            {
+            "id":"DSI-58_08",
+            "text":"Unable to organize a task"
+            },
+            {
+            "id":"DSI-58_09",
+            "text":"Was unorganized"
+            },
+            {
+            "id":"DSI-58_10",
+            "text":"Criticized or verbally attacked"
+            },
+            {
+            "id":"DSI-58_11",
+            "text":"Ignored by others"
+            },
+            {
+            "id":"DSI-58_12",
+            "text":"Spoke or performed in public"
+            },
+            {
+            "id":"DSI-58_13",
+            "text":"Dealt with rude waiter/waitress/salesperson"
+            },
+            {
+            "id":"DSI-58_14",
+            "text":"Interrupted while talking"
+            },
+            {
+            "id":"DSI-58_15",
+            "text":"Was forced to socialize"
+            },
+            {
+            "id":"DSI-58_16",
+            "text":"Someone broke a promise/appointment"
+            },
+            {
+            "id":"DSI-58_17",
+            "text":"Competed with someone"
+            },
+            {
+            "id":"DSI-58_18",
+            "text":"Was stared at"
+            },
+            {
+            "id":"DSI-58_19",
+            "text":"Did not hear from someone you expected to hear from"
+            },
+            {
+            "id":"DSI-58_20",
+            "text":"Experienced unwanted physical contact (crowded, pushed)"
+            },
+            {
+            "id":"DSI-58_21",
+            "text":"Was misunderstood"
+            },
+            {
+            "id":"DSI-58_22",
+            "text":"Was embarrassed"
+            },
+            {
+            "id":"DSI-58_23",
+            "text":"Had your sleep disturbed"
+            },
+            {
+            "id":"DSI-58_24",
+            "text":"Forgot something"
+            },
+            {
+            "id":"DSI-58_25",
+            "text":"Feared illness/pregnancy"
+            },
+            {
+            "id":"DSI-58_26",
+            "text":"Experianced illness/physical discomfort"
+            },
+            {
+            "id":"DSI-58_27",
+            "text":"Someone borrowed something without your permission"
+            },
+            {
+            "id":"DSI-58_28",
+            "text":"Your property was damaged"
+            },
+            {
+            "id":"DSI-58_29",
+            "text":"Had minor accident (broke something, tore clothing)"
+            },
+            {
+            "id":"DSI-58_30",
+            "text":"Thought about the future"
+            },
+            {
+            "id":"DSI-58_31",
+            "text":"Ran out of food/personal articles"
+            },
+            {
+            "id":"DSI-58_32",
+            "text":"Argued with spouse/boyfriend/girlfriend"
+            },
+            {
+            "id":"DSI-58_33",
+            "text":"Argued with another person"
+            },
+            {
+            "id":"DSI-58_34",
+            "text":"Waited longer than you wanted"
+            },
+            {
+            "id":"DSI-58_35",
+            "text":"Interrupted while thinking/relaxing"
+            },
+            {
+            "id":"DSI-58_36",
+            "text":"Someone \"cut\" ahead of you in a line"
+            },
+            {
+            "id":"DSI-58_37",
+            "text":"Performed poorly at sport/game"
+            },
+            {
+            "id":"DSI-58_38",
+            "text":"Did something you did not want to do"
+            },
+            {
+            "id":"DSI-58_39",
+            "text":"Unable to complete all plans for today"
+            },
+            {
+            "id":"DSI-58_40",
+            "text":"Had car trouble"
+            },
+            {
+            "id":"DSI-58_41",
+            "text":"Had difficulty in traffic"
+            },
+            {
+            "id":"DSI-58_42",
+            "text":"Money problems"
+            },
+            {
+            "id":"DSI-58_43",
+            "text":"Store lacked a desired item"
+            },
+            {
+            "id":"DSI-58_44",
+            "text":"Misplaced something"
+            },
+            {
+            "id":"DSI-58_45",
+            "text":"Bad weather"
+            },
+            {
+            "id":"DSI-58_46",
+            "text":"Unexpected expenses (fines, traffic ticket, etc.)"
+            },
+            {
+            "id":"DSI-58_47",
+            "text":"Had confrontation with an authority figure"
+            },
+            {
+            "id":"DSI-58_48",
+            "text":"Heard some bad news"
+            },
+            {
+            "id":"DSI-58_49",
+            "text":"Concerned over personal appearance"
+            },
+            {
+            "id":"DSI-58_50",
+            "text":"Exposed to feared situation or object"
+            },
+            {
+            "id":"DSI-58_51",
+            "text":"Exposed to upsetting TV show, movie, book"
+            },
+            {
+            "id":"DSI-58_52",
+            "text":"\"Pet peeve\" violated (someone fails to knock, etc.)"
+            },
+            {
+            "id":"DSI-58_53",
+            "text":"Failed to understand something"
+            },
+            {
+            "id":"DSI-58_54",
+            "text":"Worried about another's problems"
+            },
+            {
+            "id":"DSI-58_55",
+            "text":"Experienced narrow escape from danger"
+            },
+            {
+            "id":"DSI-58_56",
+            "text":"Stopped unwanted personal habit (overeating, smoking, nail-biting)"
+            },
+            {
+            "id":"DSI-58_57",
+            "text":"Had problem with kid(s)"
+            },
+            {
+            "id":"DSI-58_58",
+            "text":"Was late for work/appointment"
+            }
+
+         ]
+      },
+      {
+          "questiontype": "multi_field",
+          "instructions": "(Optional) Any stressors that we missed? (list below)",
+          "id":"DSI_other",
+          "required": false,
+          "height": 60
+      }
+   ]
+}

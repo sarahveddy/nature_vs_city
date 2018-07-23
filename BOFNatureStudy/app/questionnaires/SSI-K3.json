@@ -1,0 +1,51 @@
+{
+   "title":"SSI-K3",
+   "instructions":"Please rate the degree to which each statement applies to you or your current situation, using the given scale.",
+   "code":"",
+   "questions":[
+      {
+         "questiontype":"radiogrid",
+         "id":"SSI-K3",
+         "labels":[
+            "not at all",
+            "some",
+            "much",
+            "completely"
+         ],
+         "q_text":[
+            {
+            "id":"SSI-K3_01",
+            "text":"My studies (or my job) are at present a big burden for me."
+            },
+            {
+            "id":"SSI-K3_02",
+            "text":"There have been many changes in my life, which I need to cope with."
+            },
+            {
+            "id":"SSI-K3_03",
+            "text":"My current life circumstances are very tough."
+            },
+            {
+            "id":"SSI-K3_04",
+            "text":"I must deal with big changes in my life."
+            },
+            {
+            "id":"SSI-K3_05",
+            "text":"I must cope with a lot of difficulties."
+            },
+            {
+            "id":"SSI-K3_06",
+            "text":"Recently, I have had a lot of trouble."
+            },
+            {
+            "id":"SSI-K3_07",
+            "text":"I am currently confronted with many difficulties in my life."
+            },
+            {
+            "id":"SSI-K3_08",
+            "text":"I must adjust to completely new life circumstances."
+            }
+         ]
+      }
+   ]
+}

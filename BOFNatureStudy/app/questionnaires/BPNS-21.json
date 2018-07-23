@@ -1,0 +1,107 @@
+{
+   "title":"BPNS",
+   "instructions":"Please read each of the following items carefully, thinking about how it relates to your life, and then indicate your agreement to each statment.",
+   "code":"",
+   "questions":[
+      {
+         "questiontype":"radiogrid",
+         "id":"BPNS",
+         "shuffle": "true",
+         "labels":[
+            "Strongly disagree",
+            "Disagree",
+            "Slightly disagree",
+            "Neutral",
+            "Slightly agree",
+            "Agree",
+            "Strongly agree"
+         ],
+         "q_text":[
+            {
+            "id":"BPNS_01",
+            "text":"I feel like I am free to decide for myself how to live my life."
+            },
+            {
+            "id":"BPNS_02",
+            "text":"I really like the people I interact with."
+            },
+            {
+            "id":"BPNS_03",
+            "text":"Often, I do not feel very competent."
+            },
+            {
+            "id":"BPNS_04",
+            "text":"I feel pressured in my life."
+            },
+            {
+            "id":"BPNS_05",
+            "text":"People I know tell me I am good at what I do."
+            },
+            {
+            "id":"BPNS_06",
+            "text":"I get along with people I come into contact with."
+            },
+            {
+            "id":"BPNS_07",
+            "text":"I pretty much keep to myself and don't have a lot of social contacts."
+            },
+            {
+            "id":"BPNS_08",
+            "text":"I generally feel free to express my ideas and opinions."
+            },
+            {
+            "id":"BPNS_09",
+            "text":"I consider the people I regularly interact with to be my friends."
+            },
+            {
+            "id":"BPNS_10",
+            "text":"I have been able to learn interesting new skills recently."
+            },
+            {
+            "id":"BPNS_11",
+            "text":"In my daily life, I frequently have to do what I am told."
+            },
+            {
+            "id":"BPNS_12",
+            "text":"People in my life care about me."
+            },
+            {
+            "id":"BPNS_13",
+            "text":"Most days I feel a sense of accomplishment from what I do."
+            },
+            {
+            "id":"BPNS_14",
+            "text":"People I interact with on a daily basis tend to take my feelings into consideration."
+            },
+            {
+            "id":"BPNS_15",
+            "text":"In my life I do not get much of a chance to show how capable I am."
+            },
+            {
+            "id":"BPNS_16",
+            "text":"There are not many people that I am close to."
+            },
+            {
+            "id":"BPNS_17",
+            "text":"I feel like I can pretty much be myself in my daily situations."
+            },
+            {
+            "id":"BPNS_18",
+            "text":"The people I interact with regularly do not seem to like me much."
+            },
+            {
+            "id":"BPNS_19",
+            "text":"I often do not feel very capable."
+            },
+            {
+            "id":"BPNS_20",
+            "text":"There is not much opportunity for me to decide for myself how to do things in my daily life."
+            },
+            {
+            "id":"BPNS_21",
+            "text":"People are generally pretty friendly towards me."
+            }
+         ]
+      }
+   ]
+}

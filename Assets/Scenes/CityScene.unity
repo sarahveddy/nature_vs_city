@@ -724,9 +724,7 @@ MonoBehaviour:
   - {fileID: 1519323413677186, guid: 8d8fd5cea66ef41e0871922068419891, type: 2}
   - {fileID: 1257094095157706, guid: 285aaa18de2784e4494815fd717d1962, type: 2}
   - {fileID: 1561075369673748, guid: cb7dab19df031433d8c25a1a07fb5d9d, type: 2}
-  - {fileID: 1788679990747764, guid: e702acc810ce3433e88dae6a81922a2f, type: 2}
-  - {fileID: 1097393592485466, guid: 48d371f81aed94cc2823089c9c6f2066, type: 2}
-  presetPatchOrder: 000000000100000002000000030000000400000005000000
+  presetPatchOrder: 000000000100000002000000030000000000000002000000
 --- !u!114 &327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -787,7 +785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a7914392c8ef40078b63444b30e1dd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quitButtonTime: 300
+  quitButtonTime: 30
   quitGameTime: 1200
 --- !u!114 &332
 MonoBehaviour:

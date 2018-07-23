@@ -356,16 +356,11 @@ private void getClicks (){
 			
 			Orb_Rect = new Rect(screenPoint.x - ( buttonSize.x * 0.5f ), screenPoint.y - ( buttonSize.y * 0.5f ), buttonSize.x, buttonSize.y);
 			if(Orb_Rect.Contains(Input.mousePosition))
-			{			
-				#if UNITY_EDITOR
-					UnityEditor.EditorApplication.isPlaying = false; 
-				#else
-					Application.Quit(); 
-				#endif
+			{
+				SendMessage("Quit");
 
 			}
 		}
-		
 		Orb_Rect = new Rect(screenPoint.x - ( buttonSize.x * 0.5f ), screenPoint.y - ( buttonSize.y * 0.5f ), buttonSize.x, buttonSize.y);
 	}//end of mouserelease == true if
 		
