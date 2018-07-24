@@ -13,7 +13,8 @@ using UnityEngine;
 public class PersistentManagerScript : MonoBehaviour
 {
 	public float gameplayStart = 0.0f;
-	public bool gameplayStarted = false; 
+	public bool gameplayStarted = false;
+	public bool exitButton = false;
 	
 	public static PersistentManagerScript Instance
 	{

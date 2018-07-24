@@ -157,9 +157,10 @@ void Start (){
 	(GameObject.Find("HUDMainGroup/HUDPauseCounter").GetComponent<MeshRenderer>() as MeshRenderer).enabled = false;
 	
 	//set the HUD position according to the screen resolution
-	(GameObject.Find("HUDMainGroup/HUDGroup/HUDCurrencyGroup").GetComponent<Transform>() as Transform).transform.Translate(-fResolutionFactor,0,0);
-	(GameObject.Find("HUDMainGroup/HUDGroup/HUDScoreGroup").GetComponent<Transform>() as Transform).transform.Translate(-fResolutionFactor,0,0);
-	(GameObject.Find("HUDMainGroup/HUDGroup/HUDPause").GetComponent<Transform>() as Transform).transform.Translate(fResolutionFactor,0,0);
+	//(GameObject.Find("HUDMainGroup/HUDGroup/HUDCurrencyGroup").GetComponent<Transform>() as Transform).transform.Translate(fResolutionFactor,0,0);
+	//(GameObject.Find("HUDMainGroup/HUDGroup/HUDScoreGroup").GetComponent<Transform>() as Transform).transform.Translate(-fResolutionFactor,0,0);
+	//(GameObject.Find("HUDMainGroup/HUDGroup/HUDPause").GetComponent<Transform>() as Transform).transform.Translate(fResolutionFactor,0,0);
+	//(GameObject.Find("HUDMainGroup/HUDGroup/HUDQuit").GetComponent<Transform>() as Transform).transform.Translate(fResolutionFactor,0,0);
 		
         StartCoroutine( ShowMenu((int)MenuIDs.MainMenu));	//show Main Menu on game launch
 }

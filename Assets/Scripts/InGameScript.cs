@@ -69,7 +69,8 @@ void Update (){
 	    PersistentManagerScript.Instance.gameplayStarted &&
 	    iPauseStatus == 0) 
 	{
-		hControllerScript.tQuitButton.gameObject.active = true; 
+		hControllerScript.tQuitButton.gameObject.active = true;
+		PersistentManagerScript.Instance.exitButton = true; 
 		//Debug.Log("****QUIT BUTTON******* "+Time.realtimeSinceStartup);
 	}
 	if (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart - pauseTime > quitGameTime &&

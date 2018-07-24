@@ -64,8 +64,8 @@ void Start (){
         tHUDCurrencyContainerMid.localScale = new Vector3 (tHUDCurrencyContainerMid.localScale.x,tHUDCurrencyContainerMid.localScale.y,0.45f);
 	
 	//call the resize Dight Container function every .5 seconds
-	InvokeRepeating("resizeDigitContainer", 1, 0.5f);
-	resizeDigitContainer();
+	//InvokeRepeating("resizeDigitContainer", 1, 0.5f);
+	//resizeDigitContainer();
 }
 
 void FixedUpdate (){	
