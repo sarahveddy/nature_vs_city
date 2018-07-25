@@ -1,6 +1,9 @@
 using UnityEngine;
 using System.Collections;
+using System.Diagnostics;
 using UnityEngine.SceneManagement;
+using Debug = UnityEngine.Debug;
+
 public class InGameScript : MonoBehaviour {
 
 /*
@@ -36,9 +39,10 @@ private bool gamePlayStart = false;
 public float quitButtonTime = 60 * 5;
 public float quitGameTime = 60 * 15;
 
-	private float pauseStart = 0.0f;
-	private float pauseEnd = 0.0f;
-	private float pauseTime = 0.0f; 
+private float pauseStart = 0.0f;
+private float pauseEnd = 0.0f;
+private float pauseTime = 0.0f;
+
 	
 
 void Start (){
@@ -52,6 +56,7 @@ void Start (){
 	hPowerupsMainController = this.GetComponent<PowerupsMainController>() as PowerupsMainController;
     hCameraController = Camera.main.GetComponent<CameraController>() as CameraController;
 	hEnemyController = this.GetComponent<EnemyController>() as EnemyController;
+	
 	CurrentEnergy = 100;
 	iPauseStatus = 0;
 	iMenuStatus = 1;
@@ -62,9 +67,9 @@ void Start (){
 }//end of Start
 
 void Update (){	
-//	Debug.Log("menu "+iMenuStatus);
-//	Debug.Log("pause "+iPauseStatus);
-//	Debug.Log("death "+iDeathStatus);
+	
+	
+	//Decides if it is time for the quitbutton to appear 
 	if (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart - pauseTime > quitButtonTime &&
 	    PersistentManagerScript.Instance.gameplayStarted &&
 	    iPauseStatus == 0) 
@@ -73,6 +78,8 @@ void Update (){
 		PersistentManagerScript.Instance.exitButton = true; 
 		//Debug.Log("****QUIT BUTTON******* "+Time.realtimeSinceStartup);
 	}
+	
+	//Decides if it is time to automatically close the game
 	if (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart - pauseTime > quitGameTime &&
 	    PersistentManagerScript.Instance.gameplayStarted &&
 	    iPauseStatus == 0)
@@ -80,6 +87,8 @@ void Update (){
 		//Debug.Log("*********QUIT********** " +Time.realtimeSinceStartup);
 		Quit();
 	}
+	
+	//there is no menu to be displayed
 	if (iMenuStatus == 0)//normal gameplay
 	{
 		if (PersistentManagerScript.Instance.gameplayStart == 0.0)
@@ -88,10 +97,10 @@ void Update (){
 			PersistentManagerScript.Instance.gameplayStart = Time.realtimeSinceStartup;
 			PersistentManagerScript.Instance.gameplayStarted = true; 
 			//Debug.Log("GAMEPLAY START : "+ PersistentManagerScript.Instance.gameplayStart.ToString()); 	
-		}
-			
+		}		
 	}		
-		
+	
+	//main menu is to be displayed
 	else if (iMenuStatus == 1)//display main menu and pause game
 	{
 		hMenuScript.setMenuScriptStatus(true);
@@ -101,12 +110,12 @@ void Update (){
 	}
 	
 	
-	
-	//Pause GamePlay
+	//no pause menu to be displayed
 	if (iPauseStatus == 0)//normal gameplay
 	{
 		;
-	}		
+	}
+	//pause menu displayed
 	else if(iPauseStatus==1)//pause game
 	{	
 		Debug.Log("***** PAUSE ****** "+Time.timeSinceLevelLoad);
@@ -117,6 +126,7 @@ void Update (){
 		iPauseStatus = 2;
 		
 	}
+	//game is resumed
 	else if(iPauseStatus==3)//resume game
 	{	Debug.Log("***** RESUME ****** "+Time.timeSinceLevelLoad);
 		pauseEnd = Time.timeSinceLevelLoad;
@@ -129,21 +139,34 @@ void Update (){
 	}
 	
 	
-	
-	if(iDeathStatus==0)	//normal gameplay
-		;
-	else if(iDeathStatus==1)//call death menu
+	//player is not dead
+	if (iDeathStatus == 0)//normal gameplay
 	{
+		;
+	}	
+	//player is dead	
+	else if(iDeathStatus==1)//call death menu
+	
+	{
+		Debug.Log("*** 7 death status = 1 Update InGameScript ***");
 		hPowerupsMainController.deactivateAllPowerups();	//deactivate if a powerup is enabled
 		
 		iDeathStatus = 2;
 	}
+	//main menu is displayed and scene is reloaded
 	else if (iDeathStatus == 2)
 	{
-		hMenuScript.setMenuScriptStatus(true);
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		Debug.Log("*** 8 death status = 2 Update InGameScript ***");
+		Debug.Log(iMenuStatus);
+		Debug.Log(iPauseStatus);
+		//hMenuScript.setMenuScriptStatus(true);
+		//SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 		
 		iDeathStatus = 0;
+		bGameOver = false;
+		bGamePaused = false;
+		CurrentEnergy = 100;
+		hControllerScript.launchGame();
 	}
 	
 	if (bGamePaused == true)
@@ -183,6 +206,7 @@ public void launchGame (){
 *	CALLED BY:	ControllerScript.DeathScene()
 */
 public void setupDeathMenu (){	
+	Debug.Log("*** 6 setupDeathMenu InGameScript ***");
 	bGameOver = true;
 	bGamePaused = true;	
 	iDeathStatus = 1;
@@ -234,7 +258,9 @@ public void setupDeathMenu (){
 *				processStumble()
 */
 public void collidedWithObstacle (){
+	Debug.Log("*** 2 collidedWithObstacle InGameScript ***");
 	decrementEnergy(100);		// deduct energy after collision
+	Debug.Log("*** 3 energy decremented collidedWithObstacle InGameScript ***");
 	hCameraController.setCameraShakeImpulseValue(5);
 }//end of Collided With Obstacle
 

@@ -152,6 +152,7 @@ void Start (){
 	
 	tPlayerSidesCollider = GameObject.Find("PlayerSidesCollider").transform;	
 	tFrontCollider = GameObject.Find("PlayerFrontCollider").transform;
+	
 	tHUDGroup = GameObject.Find("HUDMainGroup/HUDGroup").transform;
 	tPauseButton = GameObject.Find("HUDMainGroup/HUDGroup/HUDPause").transform;
 	tQuitButton = GameObject.Find("HUDMainGroup/HUDGroup/HUDQuit").transform;
@@ -221,16 +222,26 @@ public void launchGame (){
 	aPlayer["run"].speed = Mathf.Clamp( (fCurrentWalkSpeed/fStartingWalkSpeed)/1.1f, 0.8f, 1.2f );
 	aPlayer.Play("run");
 	
-        hSoundManager.playSound(SoundManager.CharacterSounds.Footsteps);//play the footsteps sound
+    hSoundManager.playSound(SoundManager.CharacterSounds.Footsteps);//play the footsteps sound
+	bControlsEnabled = true; 
+	hMenuScript.showHUDElements();
+	iDeathAnimStartTime = 0;
 }
 
 void Update (){
 	if(hInGameScript.isGamePaused()==true)
 		return;
-	
+
 	if (hInGameScript.isEnergyZero())
-		if(DeathScene())
+	{
+		Debug.Log("*** 4 energy is at 0 - Update ControllerScript ***");
+		if (DeathScene())
+		{
 			return;
+		}
+        			
+	}
+		
 	
 	getClicks();	//get taps/clicks for pause menu etc.
 	
@@ -238,7 +249,6 @@ void Update (){
 		SwipeMovementControl();
 	
 	//running by pressing alternating keys
-	//n
 	if (Input.GetKeyDown ("n")) {
 
 		if (mPressedLast) {
@@ -274,7 +284,7 @@ void FixedUpdate (){
 	{
 		if(bExecuteLand)
 		{
-                hSoundManager.playSound(SoundManager.CharacterSounds.JumpLand);
+            hSoundManager.playSound(SoundManager.CharacterSounds.JumpLand);
 			bExecuteLand = false;
 			JumpAnimationFirstTime = true;
 		}
@@ -334,7 +344,7 @@ void FixedUpdate (){
 *	CALLED BY:	Update()
 */
 private void getClicks (){
-	//TODO: this is where pause menu is accessed from the HUD
+	//TODO: Fix weirdness with the help button
 	if(Input.GetMouseButtonUp(0) && bMouseReleased==true)
 	{
             Vector3 screenPoint = new  Vector3(0,0,0) ;
@@ -551,12 +561,14 @@ private bool reConfirmPitFalling ( Vector3 Desired_Horinzontal_Pos ,   float iSt
 *	CALLED BY:	Update()
 */
 bool DeathScene (){
-	 bInAir = false;
+	Debug.Log("*** 5 DeathScene ControllerScript ***");
+	bInAir = false;
 	tPlayerRotation.localEulerAngles = new Vector3(0,0,0);
 	
 	if (iDeathAnimStartTime == 0)
-	{
-            hSoundManager.stopSound(SoundManager.CharacterSounds.Footsteps);
+		{
+		Debug.Log("*** 5.1 DeathScene ControllerScript Death anim in progress ***");
+        hSoundManager.stopSound(SoundManager.CharacterSounds.Footsteps);
 		bControlsEnabled = false;
 				
         Vector3 v3EffectPosition= this.transform.position;
@@ -567,10 +579,11 @@ bool DeathScene (){
 		hEnemyController.playDeathAnimation();
 		
 		hMenuScript.hideHUDElements();
-            iDeathAnimStartTime = (int) Time.time;	
+        iDeathAnimStartTime = (int) Time.time;	
 	}	
 	else if (iDeathAnimStartTime != 0 && (Time.time - iDeathAnimStartTime) >= iDeathAnimEndTime)
 	{		
+		Debug.Log("*** 5.2 DeathScene ControllerScript Death anim end ***");
 		hInGameScript.setupDeathMenu();
 		return true;
 	}

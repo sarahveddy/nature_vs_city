@@ -26,6 +26,7 @@ void Start (){
 void OnCollisionEnter ( Collision collision  ){		
 	if (bFrontColliderFlag == true)
 	{
+		Debug.Log("*** 1 OnCollisionEnter PlayerFrontColliderScript ***");
 		hPlayerSidesColliderScript.deactivateSidesCollider();	//dont detect stumbles on death
 		hInGameScript.collidedWithObstacle();	//play the death scene
 	}

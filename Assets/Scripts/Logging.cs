@@ -47,7 +47,7 @@ public class Logging : MonoBehaviour
 		}
 		else
 		{
-			UnityEngine.Debug.Log("Logged successfully: " + message + " " + value);
+			//UnityEngine.Debug.Log("Logged successfully: " + message + " " + value);
 		}
 	}
 } 
