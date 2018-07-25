@@ -22,6 +22,7 @@ enum StrafeDirection {left = 0, right = 1}
 private Transform tPlayer;	//the main character transform
 private Transform tPlayerRotation;	//Player child transform to rotate it in game
 private Animation aPlayer;				//character animation
+private Renderer playerRenderer; 
 
 private Transform tPlayerSidesCollider;	//sides collider transform (detects stumble)
 private Transform tFrontCollider;			//front collider transfrom (detects collisions)
@@ -127,6 +128,10 @@ bool mPressedLast = true;
 bool nPressedLast = true;
 public float lastKeyPress = -1000;
  
+//keep track of invisibility
+private float invincibilityStartTime;
+private bool invincible = false;
+private float invincibilityDuration = 3.0f; 
 
 void Start (){
 	hMenuScript = GameObject.Find("MenuGroup").GetComponent<MenuScript>() as MenuScript;
@@ -145,6 +150,7 @@ void Start (){
 	
 	tPlayer = transform;
 	tPlayerRotation = transform.Find("PlayerRotation");
+	playerRenderer = GameObject.Find("rend").GetComponent<SkinnedMeshRenderer>(); 
 	
 	//get the animation component of the player character
 	aPlayer = this.transform.Find("PlayerRotation/PlayerMesh/Prisoner").GetComponent<Animation>() as Animation;
@@ -218,7 +224,9 @@ IEnumerator  playIdleAnimations ()
 public void launchGame (){
 	StopCoroutine("playIdleAnimations");//stop idle animations
 	hEnemyController.launchEnemy();
-		
+
+	fCurrentWalkSpeed = 10f;
+	
 	aPlayer["run"].speed = Mathf.Clamp( (fCurrentWalkSpeed/fStartingWalkSpeed)/1.1f, 0.8f, 1.2f );
 	aPlayer.Play("run");
 	
@@ -226,6 +234,12 @@ public void launchGame (){
 	bControlsEnabled = true; 
 	hMenuScript.showHUDElements();
 	iDeathAnimStartTime = 0;
+	invincibilityStartTime = Time.time;
+	invincible = true; 
+	InvokeRepeating("invincibleFlash", 0, 0.2f);
+	tFrontCollider.GetComponent<BoxCollider>().enabled = false; 
+	tPlayerSidesCollider.GetComponent<BoxCollider>().enabled = false; 
+
 }
 
 void Update (){
@@ -234,14 +248,23 @@ void Update (){
 
 	if (hInGameScript.isEnergyZero())
 	{
-		Debug.Log("*** 4 energy is at 0 - Update ControllerScript ***");
+		//Debug.Log("*** 4 energy is at 0 - Update ControllerScript ***");
 		if (DeathScene())
 		{
 			return;
 		}
         			
 	}
-		
+
+	if (invincible && Time.time - invincibilityStartTime > invincibilityDuration)
+	{
+		CancelInvoke("invincibleFlash");
+		playerRenderer.enabled = true;
+		tFrontCollider.GetComponent<BoxCollider>().enabled = true; 
+		tPlayerSidesCollider.GetComponent<BoxCollider>().enabled = true;
+		invincible = false; 
+
+	}
 	
 	getClicks();	//get taps/clicks for pause menu etc.
 	
@@ -567,7 +590,7 @@ bool DeathScene (){
 	
 	if (iDeathAnimStartTime == 0)
 		{
-		Debug.Log("*** 5.1 DeathScene ControllerScript Death anim in progress ***");
+		//Debug.Log("*** 5.1 DeathScene ControllerScript Death anim in progress ***");
         hSoundManager.stopSound(SoundManager.CharacterSounds.Footsteps);
 		bControlsEnabled = false;
 				
@@ -578,12 +601,12 @@ bool DeathScene (){
 		aPlayer.CrossFade("death",0.1f);
 		hEnemyController.playDeathAnimation();
 		
-		hMenuScript.hideHUDElements();
+		//hMenuScript.hideHUDElements();
         iDeathAnimStartTime = (int) Time.time;	
 	}	
 	else if (iDeathAnimStartTime != 0 && (Time.time - iDeathAnimStartTime) >= iDeathAnimEndTime)
 	{		
-		Debug.Log("*** 5.2 DeathScene ControllerScript Death anim end ***");
+		//Debug.Log("*** 5.2 DeathScene ControllerScript Death anim end ***");
 		hInGameScript.setupDeathMenu();
 		return true;
 	}
@@ -985,6 +1008,18 @@ void strafePlayer ( StrafeDirection strafeDirection  ){
 		aPlayer.CrossFade(strafeDirection.ToString(),0.01f);
 		
 		bInStrafe = true;
+	}
+}
+
+void invincibleFlash()
+{
+	if (playerRenderer.enabled)
+	{
+		playerRenderer.enabled = false; 
+	}
+	else
+	{
+		playerRenderer.enabled = true; 
 	}
 }
 

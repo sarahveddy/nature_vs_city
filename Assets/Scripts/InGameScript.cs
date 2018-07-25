@@ -42,6 +42,9 @@ public float quitGameTime = 60 * 15;
 private float pauseStart = 0.0f;
 private float pauseEnd = 0.0f;
 private float pauseTime = 0.0f;
+private float timePlayed = 0.0f;
+	private float timeLeft; 
+
 
 	
 
@@ -68,6 +71,13 @@ void Start (){
 
 void Update (){	
 	
+//	Debug.Log("***TIME  :" + Time.realtimeSinceStartup);
+//	Debug.Log("***PAUSETIME  :" + pauseTime);
+//	Debug.Log("***STARTTIME  :" + PersistentManagerScript.Instance.gameplayStart);
+	timePlayed = (Time.realtimeSinceStartup - pauseTime - PersistentManagerScript.Instance.gameplayStart);
+	Debug.Log("***TIMEPLAYED  :" + timePlayed);
+	timeLeft = quitGameTime - timePlayed;
+	Debug.Log("***TIMELEFT  :" + timeLeft);
 	
 	//Decides if it is time for the quitbutton to appear 
 	if (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart - pauseTime > quitButtonTime &&
@@ -96,7 +106,7 @@ void Update (){
 			//Debug.Log("SETTING VALUES");
 			PersistentManagerScript.Instance.gameplayStart = Time.realtimeSinceStartup;
 			PersistentManagerScript.Instance.gameplayStarted = true; 
-			//Debug.Log("GAMEPLAY START : "+ PersistentManagerScript.Instance.gameplayStart.ToString()); 	
+			Debug.Log("GAMEPLAY START : "+ PersistentManagerScript.Instance.gameplayStart.ToString()); 	
 		}		
 	}		
 	
@@ -118,8 +128,12 @@ void Update (){
 	//pause menu displayed
 	else if(iPauseStatus==1)//pause game
 	{	
-		Debug.Log("***** PAUSE ****** "+Time.timeSinceLevelLoad);
-		pauseStart = Time.timeSinceLevelLoad; 
+		//Debug.Log("***** PAUSE ****** "+Time.timeSinceLevelLoad);
+		if (PersistentManagerScript.Instance.gameplayStarted)
+		{
+			pauseStart = Time.timeSinceLevelLoad;
+		}
+		
 		hMenuScript.setMenuScriptStatus(true);
 		hMenuScript.displayPauseMenu();
 		
@@ -128,10 +142,14 @@ void Update (){
 	}
 	//game is resumed
 	else if(iPauseStatus==3)//resume game
-	{	Debug.Log("***** RESUME ****** "+Time.timeSinceLevelLoad);
-		pauseEnd = Time.timeSinceLevelLoad;
-
-		pauseTime += (pauseEnd - pauseStart); 
+	{	//Debug.Log("***** RESUME ****** "+Time.timeSinceLevelLoad);
+		if (PersistentManagerScript.Instance.gameplayStarted)
+		{
+			pauseEnd = Time.timeSinceLevelLoad;
+            
+			pauseTime += (pauseEnd - pauseStart); 
+		}
+		
 		bGamePaused = false;		
 		hMenuScript.setMenuScriptStatus(false);
 		
@@ -148,7 +166,7 @@ void Update (){
 	else if(iDeathStatus==1)//call death menu
 	
 	{
-		Debug.Log("*** 7 death status = 1 Update InGameScript ***");
+		//Debug.Log("*** 7 death status = 1 Update InGameScript ***");
 		hPowerupsMainController.deactivateAllPowerups();	//deactivate if a powerup is enabled
 		
 		iDeathStatus = 2;
@@ -156,7 +174,7 @@ void Update (){
 	//main menu is displayed and scene is reloaded
 	else if (iDeathStatus == 2)
 	{
-		Debug.Log("*** 8 death status = 2 Update InGameScript ***");
+		//Debug.Log("*** 8 death status = 2 Update InGameScript ***");
 		Debug.Log(iMenuStatus);
 		Debug.Log(iPauseStatus);
 		//hMenuScript.setMenuScriptStatus(true);
@@ -206,7 +224,7 @@ public void launchGame (){
 *	CALLED BY:	ControllerScript.DeathScene()
 */
 public void setupDeathMenu (){	
-	Debug.Log("*** 6 setupDeathMenu InGameScript ***");
+	//Debug.Log("*** 6 setupDeathMenu InGameScript ***");
 	bGameOver = true;
 	bGamePaused = true;	
 	iDeathStatus = 1;
@@ -258,9 +276,9 @@ public void setupDeathMenu (){
 *				processStumble()
 */
 public void collidedWithObstacle (){
-	Debug.Log("*** 2 collidedWithObstacle InGameScript ***");
+	//Debug.Log("*** 2 collidedWithObstacle InGameScript ***");
 	decrementEnergy(100);		// deduct energy after collision
-	Debug.Log("*** 3 energy decremented collidedWithObstacle InGameScript ***");
+	//Debug.Log("*** 3 energy decremented collidedWithObstacle InGameScript ***");
 	hCameraController.setCameraShakeImpulseValue(5);
 }//end of Collided With Obstacle
 

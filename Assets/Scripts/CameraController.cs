@@ -67,8 +67,8 @@ void Update (){
 	if(hInGameScript.isGamePaused()==true)		
 		return;
 	
-	if (hInGameScript.isEnergyZero())	//switch to death camera state on depletion of energy
-		iCameraState = 2;
+	//if (hInGameScript.isEnergyZero())	//switch to death camera state on depletion of energy
+		//iCameraState = 2;
 }
 
 void FixedUpdate (){
