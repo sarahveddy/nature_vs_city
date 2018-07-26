@@ -183,7 +183,7 @@ void Start (){
 	bInJump = false;
 	fCurrentUpwardVelocity = 0;
 	fCurrentHeight = 0;
-	
+
 	bDirectionQueueFlag = false;
         directionQueue = SwipeControls.SwipeDirection.Null;
 	iLanePosition = 0;	//set current lane to mid	

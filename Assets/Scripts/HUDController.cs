@@ -23,6 +23,8 @@ private TextMesh tmHUDScoreText;
 private TextMesh tmHUDTimerText;
 private Transform tHUDScoreContainerMid;
 private Transform tHUDCurrencyContainerMid;
+private MeshRenderer tHUDTimer;
+private MeshRenderer HUDTimerBg; 
 
 //Calculate Score
 private float fPreviousDistance = 0.0f;	//mileage in the last frame
@@ -47,7 +49,18 @@ void Start (){
 		
 	tHUDScoreContainerMid = GameObject.Find("HUDMainGroup/HUDGroup/HUDScoreGroup/HUD_Score_BG").GetComponent<Transform>() as Transform;	//	HUD Score Container	
 	tHUDCurrencyContainerMid = GameObject.Find("HUDMainGroup/HUDGroup/HUDCurrencyGroup/HUD_Currency_BG").GetComponent<Transform>() as Transform;	//	HUD Currency Container
-		
+	
+	tHUDTimer = GameObject.Find("HUDMainGroup/HUDGroup/HUDTimer/HUD_Timer_Text").GetComponent<MeshRenderer>();
+	
+	HUDTimerBg = GameObject.Find("HUDMainGroup/HUDGroup/HUDTimer/HUD_Timer_BG/HUD_Score_BG_Mid").GetComponent<MeshRenderer>();
+
+	if (!PersistentManagerScript.Instance.showTimer)
+	{
+		tHUDTimer.enabled = false;
+		tmHUDTimerText.GetComponent<MeshRenderer>().enabled = false;
+		HUDTimerBg.enabled = false; 
+	}
+	
 	//get time difference to calculate score
 	
 	fCurrentTime = Time.time;

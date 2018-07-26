@@ -81,7 +81,11 @@ public void createNewPatch (){
 }
 
 private void instantiateNextPatch (){	
-        goNextPatch = Instantiate(patchesPrefabs[patchIndexSelector()],new Vector3(fPatchDistance*(iCurrentPNum+1),0,0),Quaternion.identity) as GameObject;
+	goNextPatch = Instantiate(patchesPrefabs[patchIndexSelector()],new Vector3(fPatchDistance*(iCurrentPNum+1),0,0),Quaternion.identity) as GameObject;
+//	if (!PersistentManagerScript.Instance.obstacles)
+//	{ 
+//		goNextPatch.transform.Find("Obstacles").gameObject.SetActiveRecursively(false);
+//	}
 }
 
 /*
@@ -89,8 +93,25 @@ private void instantiateNextPatch (){
 *	CALLED BY: Start()
 */
 private void instantiateStartPatch (){
-        goCurrentPatch = Instantiate(patchesPrefabs[patchIndexSelector()], new Vector3(0,0,0),Quaternion.identity) as GameObject;
-        goNextPatch = Instantiate(patchesPrefabs[patchIndexSelector()],new Vector3(fPatchDistance,0,0),Quaternion.identity) as GameObject;
+	
+	goCurrentPatch = Instantiate(patchesPrefabs[patchIndexSelector()], new Vector3(0,0,0),Quaternion.identity) as GameObject;
+	goNextPatch = Instantiate(patchesPrefabs[patchIndexSelector()],new Vector3(fPatchDistance,0,0),Quaternion.identity) as GameObject;
+//	if (!PersistentManagerScript.Instance.obstacles)
+//	{
+//		Collider colliders = goCurrentPatch.GetComponentsInChildren(typeof(Collider)) as Collider;
+//		foreach (Component col in colliders)
+//		{
+//			col.enabled = false
+//		}
+//		goNextPatch.GetComponentsInChildren(typeof(Collider));
+//		
+//		goCurrentPatch.GetComponentsInChildren(typeof(Renderer));
+//		goNextPatch.GetComponentsInChildren(typeof(Renderer));
+//
+//		
+////		goCurrentPatch.transform.Find("Obstacles").gameObject.SetActiveRecursively(false);
+////		goNextPatch.transform.Find("Obstacles").gameObject.SetActiveRecursively(false);
+//	}
 }
 
 private int patchIndexSelector()
@@ -100,8 +121,6 @@ private int patchIndexSelector()
 	{
 		patchOrderIndex = 0; 
 	}
-
-	//Debug.Log("*********************"+presetPatchOrder[patchOrderIndex]);
 	
 	return presetPatchOrder[patchOrderIndex];
 }

@@ -296,13 +296,13 @@ private void handlerPauseMenu ( Transform buttonTransform  ){
 private void handlerGameOverMenu ( Transform buttonTransform  ){
 	if (tGameOverButtons[0] == buttonTransform)//main menu button
 	{
-		hInGameScript.procesClicksDeathMenu(GameOverMenuEvents.Back);
+		hInGameScript.processClicksDeathMenu(GameOverMenuEvents.Back);
         CloseMenu((int) MenuIDs.GameOverMenu);
         StartCoroutine(ShowMenu((int) MenuIDs.MainMenu));		
 	}
 	else if (tGameOverButtons[1] == buttonTransform)//play button
 	{
-		hInGameScript.procesClicksDeathMenu(GameOverMenuEvents.Play);		
+		hInGameScript.processClicksDeathMenu(GameOverMenuEvents.Play);		
 		CloseMenu(CurrentMenu);
 	}	
 }

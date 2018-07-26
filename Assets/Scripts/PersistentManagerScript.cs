@@ -12,9 +12,24 @@ using UnityEngine;
 
 public class PersistentManagerScript : MonoBehaviour
 {
+	[Header("GAMEPLAY SETTINGS")]
+	public bool freePlay = false;
+ 	public bool randomLevel = false;
+ 	
+ 	public bool obstacles = false;
+
+	[Range(0, 300)]
+	public float secondsBeforeQuitButton = 0.0f;
+	[Range(0, 1200)]
+ 	public float secondsBeforeGameEnd = 0.0f;
+	public bool showTimer = false; 
+	
+	[Header("TIMING VARIABLES")]
 	public float gameplayStart = 0.0f;
 	public bool gameplayStarted = false;
 	public bool exitButton = false;
+	
+	
 	
 	public static PersistentManagerScript Instance
 	{
@@ -35,5 +50,4 @@ public class PersistentManagerScript : MonoBehaviour
 			Destroy(gameObject);
 		}
 	}
-
 }
