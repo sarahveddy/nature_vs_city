@@ -44,6 +44,7 @@ public class InGameScript : MonoBehaviour
 	private float pauseStart = 0.0f;
 	private float pauseEnd = 0.0f;
 	private float pauseTime = 0.0f;
+	
 	private float timePlayed = 0.0f;
 	public float timeLeft;
 	//private TimeSpan timer;
@@ -78,7 +79,7 @@ public class InGameScript : MonoBehaviour
 //	Debug.Log("***TIME  :" + Time.realtimeSinceStartup);
 //	Debug.Log("***PAUSETIME  :" + pauseTime);
 //	Debug.Log("***STARTTIME  :" + PersistentManagerScript.Instance.gameplayStart);
-		timePlayed = (Time.realtimeSinceStartup - pauseTime - PersistentManagerScript.Instance.gameplayStart);
+		timePlayed = Time.realtimeSinceStartup - pauseTime - PersistentManagerScript.Instance.gameplayStart;
 //		Debug.Log("***TIMEPLAYED  :" + timePlayed);
 		timeLeft = quitGameTime - timePlayed;
 //		Debug.Log("***TIMELEFT  :" + timeLeft);
@@ -102,6 +103,7 @@ public class InGameScript : MonoBehaviour
 			//Debug.Log("*********QUIT********** " +Time.realtimeSinceStartup);
 			Quit();
 		}
+		
 
 		//there is no menu to be displayed
 		if (iMenuStatus == 0) //normal gameplay
@@ -160,6 +162,7 @@ public class InGameScript : MonoBehaviour
 			hMenuScript.setMenuScriptStatus(false);
 
 			iPauseStatus = 0;
+			hControllerScript.setCurrentWalkSpeed(100);
 		}
 
 

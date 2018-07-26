@@ -92,7 +92,7 @@ private bool  bMouseReleased = true;
 private bool  bControlsEnabled = true;
 
 //action queue
-    private SwipeControls.SwipeDirection directionQueue;
+private SwipeControls.SwipeDirection directionQueue;
 private bool  bDirectionQueueFlag = false;
 
 //Physics Constants
@@ -243,17 +243,23 @@ public void launchGame (){
 }
 
 void Update (){
+	Debug.Log("*****   " + getCurrentWalkSpeed());
+	
 	if(hInGameScript.isGamePaused()==true)
 		return;
-
+	
+	if (getCurrentWalkSpeed() < 1)
+	{
+		hInGameScript.pauseGame();
+	}
+	
 	if (hInGameScript.isEnergyZero())
 	{
 		//Debug.Log("*** 4 energy is at 0 - Update ControllerScript ***");
 		if (DeathScene())
 		{
 			return;
-		}
-        			
+		}  			
 	}
 
 	if (invincible && Time.time - invincibilityStartTime > invincibilityDuration)
@@ -263,7 +269,6 @@ void Update (){
 		tFrontCollider.GetComponent<BoxCollider>().enabled = true; 
 		tPlayerSidesCollider.GetComponent<BoxCollider>().enabled = true;
 		invincible = false; 
-
 	}
 	
 	getClicks();	//get taps/clicks for pause menu etc.
@@ -339,13 +344,13 @@ void FixedUpdate (){
 	if (fCurrentWalkSpeed < fEndingWalkSpeed)
 		//check rhythm
 		
-		if (Time.time - lastKeyPress > .75f) 
+		if (Time.time - lastKeyPress > .75f && !invincible) 
 		{
 //			pressing too slow, slow down player
 			fCurrentWalkSpeed -= 1;
-			if (fCurrentWalkSpeed < 10)
+			if (fCurrentWalkSpeed < 0)
 			{
-				fCurrentWalkSpeed = 10; 
+				fCurrentWalkSpeed = 0.5f; 
 			}
 		} 
 		else
@@ -1028,6 +1033,11 @@ public float getCurrentForwardSpeed (){ return fCurrentForwardSpeed; }
 public int getCurrentLane (){ return iLanePosition; }
 public float getCurrentPlayerRotation (){ return tCurrentAngle; }
 public float getCurrentWalkSpeed (){ return fCurrentWalkSpeed; }
+
+public void setCurrentWalkSpeed(float f)
+{
+	fCurrentWalkSpeed = f;
+}
 public bool isInAir (){
 	 if (bInAir || bJumpFlag || bInJump || bDiveFlag)
 		return true;

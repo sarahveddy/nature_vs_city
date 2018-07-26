@@ -3106,6 +3106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quitButtonTime: 30
   quitGameTime: 1200
+  timeLeft: 0
 --- !u!137 &137659501601281694
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

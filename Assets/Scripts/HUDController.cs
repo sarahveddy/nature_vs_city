@@ -62,8 +62,8 @@ void Start (){
 	iDivisorCurrency = 10;
 	iDivisorMultiplier = 10;
 	
-    tHUDScoreContainerMid.localScale = new Vector3(tHUDScoreContainerMid.localScale.x, tHUDScoreContainerMid.localScale.y,0.45f);
-        tHUDCurrencyContainerMid.localScale = new Vector3 (tHUDCurrencyContainerMid.localScale.x,tHUDCurrencyContainerMid.localScale.y,0.45f);
+    //tHUDScoreContainerMid.localScale = new Vector3(tHUDScoreContainerMid.localScale.x, tHUDScoreContainerMid.localScale.y,0.45f);
+   	//tHUDCurrencyContainerMid.localScale = new Vector3 (tHUDCurrencyContainerMid.localScale.x,tHUDCurrencyContainerMid.localScale.y,0.45f);
 	
 	//call the resize Dight Container function every .5 seconds
 	//InvokeRepeating("resizeDigitContainer", 1, 0.5f);
@@ -116,22 +116,22 @@ IEnumerator  UpdateHUDStats (){
 *	CALLED BY:	Start() (invoke repeating)
 */
 private void resizeDigitContainer (){
-	int fScore = hInGameScript.getLevelScore();
-	int fCurrency = hPowerupsMainController.getCurrencyUnits();
-		
-	if ( (fScore / iDivisorScore) >= 1 )
-	{
-		//tHUDScoreContainerMid.localScale.z += 0.4f;	//expand the Score Container Mid
-        tHUDScoreContainerMid.localScale += new Vector3(0,0,0.4f);
-
-		iDivisorScore *= 10;
-	}
-	
-	if ( (fCurrency / iDivisorCurrency) >= 1 )
-	{
-		//tHUDCurrencyContainerMid.localScale.z += 0.4f;		//expand the Currency Container Mid
-        tHUDCurrencyContainerMid.localScale += new Vector3(0,0,0.4f);
-		iDivisorCurrency *= 10;
-	}
+//	int fScore = hInGameScript.getLevelScore();
+//	int fCurrency = hPowerupsMainController.getCurrencyUnits();
+//		
+//	if ( (fScore / iDivisorScore) >= 1 )
+//	{
+//		//tHUDScoreContainerMid.localScale.z += 0.4f;	//expand the Score Container Mid
+//        //tHUDScoreContainerMid.localScale += new Vector3(0,0,0.4f);
+//
+//		iDivisorScore *= 10;
+//	}
+//	
+//	if ( (fCurrency / iDivisorCurrency) >= 1 )
+//	{
+//		//tHUDCurrencyContainerMid.localScale.z += 0.4f;		//expand the Currency Container Mid
+//        //tHUDCurrencyContainerMid.localScale += new Vector3(0,0,0.4f);
+//		iDivisorCurrency *= 10;
+//	}
 }
 }
