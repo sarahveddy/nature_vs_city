@@ -20,6 +20,7 @@ private ControllerScript hControllerScript;
 
 private TextMesh tmHUDCurrencyText;
 private TextMesh tmHUDScoreText;
+private TextMesh tmHUDTimerText;
 private Transform tHUDScoreContainerMid;
 private Transform tHUDCurrencyContainerMid;
 
@@ -42,6 +43,7 @@ void Start (){
 
 	tmHUDCurrencyText = GameObject.Find("HUDMainGroup/HUDGroup/HUDCurrencyGroup/HUD_Currency_Text").GetComponent<TextMesh>() as TextMesh;
 	tmHUDScoreText = GameObject.Find("HUDMainGroup/HUDGroup/HUDScoreGroup/HUD_Score_Text").GetComponent<TextMesh>() as TextMesh;
+	tmHUDTimerText = GameObject.Find("HUDMainGroup/HUDGroup/HUDTimer/HUD_Timer_Text").GetComponent<TextMesh>() as TextMesh;
 		
 	tHUDScoreContainerMid = GameObject.Find("HUDMainGroup/HUDGroup/HUDScoreGroup/HUD_Score_BG").GetComponent<Transform>() as Transform;	//	HUD Score Container	
 	tHUDCurrencyContainerMid = GameObject.Find("HUDMainGroup/HUDGroup/HUDCurrencyGroup/HUD_Currency_BG").GetComponent<Transform>() as Transform;	//	HUD Currency Container
@@ -103,6 +105,9 @@ IEnumerator  UpdateHUDStats (){
 		
 	tmHUDCurrencyText.text = hPowerupsMainController.getCurrencyUnits().ToString();	//update Currency on HUD
 	tmHUDScoreText.text = hInGameScript.getLevelScore().ToString();				//update Score on HUD
+	
+	tmHUDTimerText.text = hInGameScript.getTimeLeftFormatted();
+	
 
 }
 

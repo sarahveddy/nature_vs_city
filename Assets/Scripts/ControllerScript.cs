@@ -584,7 +584,7 @@ private bool reConfirmPitFalling ( Vector3 Desired_Horinzontal_Pos ,   float iSt
 *	CALLED BY:	Update()
 */
 bool DeathScene (){
-	Debug.Log("*** 5 DeathScene ControllerScript ***");
+	//Debug.Log("*** 5 DeathScene ControllerScript ***");
 	bInAir = false;
 	tPlayerRotation.localEulerAngles = new Vector3(0,0,0);
 	
