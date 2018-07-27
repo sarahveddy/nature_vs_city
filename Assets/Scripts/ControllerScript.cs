@@ -156,6 +156,11 @@ public class ControllerScript : MonoBehaviour {
 		
 		tPlayerSidesCollider = GameObject.Find("PlayerSidesCollider").transform;	
 		tFrontCollider = GameObject.Find("PlayerFrontCollider").transform;
+		if (!PersistentManagerScript.Instance.obstacles)
+		{
+			tFrontCollider.GetComponent<BoxCollider>().enabled = false; 
+			tPlayerSidesCollider.GetComponent<BoxCollider>().enabled = false;
+		}
 		
 		tHUDGroup = GameObject.Find("HUDMainGroup/HUDGroup").transform;
 		tPauseButton = GameObject.Find("HUDMainGroup/HUDGroup/HUDPause").transform;
@@ -264,8 +269,12 @@ public class ControllerScript : MonoBehaviour {
 		{
 			CancelInvoke("invincibleFlash");
 			playerRenderer.enabled = true;
-			tFrontCollider.GetComponent<BoxCollider>().enabled = true; 
-			tPlayerSidesCollider.GetComponent<BoxCollider>().enabled = true;
+			if (PersistentManagerScript.Instance.obstacles)
+			{
+				tFrontCollider.GetComponent<BoxCollider>().enabled = true; 
+				tPlayerSidesCollider.GetComponent<BoxCollider>().enabled = true;
+			}
+			
 			invincible = false; 
 		}
 		
