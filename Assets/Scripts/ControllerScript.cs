@@ -246,7 +246,7 @@ public class ControllerScript : MonoBehaviour {
 	}
 	
 	void Update (){
-		Debug.Log("*****   " + getCurrentWalkSpeed());
+//		Debug.Log("*****   " + getCurrentWalkSpeed());
 		
 		if(hInGameScript.isGamePaused()==true)
 			return;

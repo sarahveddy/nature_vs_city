@@ -32,11 +32,11 @@
           "required": false,
           "height": 60
         },
-        {  
+        {
             "questiontype":"drop_down",
             "instructions":"What is the highest degree or level of school you have completed? If currently enrolled, mark the previous grade or highest degree received. ",
             "id":"schooling",
-            "items":[  
+            "items":[
                 "No schooling completed",
                 "Nursery school to 8th grade",
                 "9th, 10th, or 11th grade",
@@ -59,13 +59,13 @@
             "placeholder":"Subject",
             "id":"subject"
         },
-        {  
+        {
             "questiontype":"drop_down",
             "instructions":"Please indicate your employment status.",
             "id":"employment_status",
             "width":350,
             "dropwidth":350,
-            "items":[  
+            "items":[
                 "Employed for wages",
                 "Self-employed",
                 "Out of work and looking for work",
@@ -78,14 +78,14 @@
                 "I prefer not to answer"
             ]
         },
-        {  
+        {
             "questiontype":"drop_down",
             "instructions":"Please indicate your marital status.",
             "id":"marital_status",
             "width":350,
             "dropwidth":920,
             "dropheight":140,
-            "items":[  
+            "items":[
                 "Single, never married",
                 "Married or domestic partnership",
                 "Widowed",

@@ -304,8 +304,7 @@ public class InGameScript : MonoBehaviour
 		{
 			string[] s = Application.absoluteURL.Split('/');
 			string newURL = s[0] + "/redirect_next_page";
-			FindObjectOfType<Logging>().SendLog("QUIT BUTTON PRESSED",
-				(Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart - pauseTime).ToString());
+//			FindObjectOfType<Logging>().SendLog("QUIT BUTTON PRESSED",(Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart - pauseTime).ToString());
 			#if UNITY_EDITOR
 					UnityEditor.EditorApplication.isPlaying = false;
 			#else

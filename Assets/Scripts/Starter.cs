@@ -11,7 +11,7 @@ public class Starter : MonoBehaviour {
 		{
 			int sceneIndex = Random.Range(1, 3);
 			SceneManager.LoadScene(sceneIndex);
-			FindObjectOfType<Logging>().SendLog("SCENE SELECTED", sceneIndex.ToString());
+//			FindObjectOfType<Logging>().SendLog("SCENE SELECTED", sceneIndex.ToString());
 		}
 	}
 	

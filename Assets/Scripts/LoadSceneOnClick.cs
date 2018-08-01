@@ -8,6 +8,6 @@ public class LoadSceneOnClick : MonoBehaviour
 	public void LoadByIndex(int sceneIndex)
 	{
 		SceneManager.LoadScene(sceneIndex);
-		FindObjectOfType<Logging>().SendLog("SCENE SELECTED", sceneIndex.ToString());
+//		FindObjectOfType<Logging>().SendLog("SCENE SELECTED", sceneIndex.ToString());
 	}
 }

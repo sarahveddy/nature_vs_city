@@ -13,12 +13,11 @@ using UnityEngine;
 public class PersistentManagerScript : MonoBehaviour
 {
 	[Header("GAMEPLAY SETTINGS")]
-	public bool freePlay = false;
  	public bool randomLevel = false;
  	
  	public bool obstacles = false;
 
-	[Range(0, 300)]
+	[Range(0, 1500)]
 	public float secondsBeforeQuitButton = 0.0f;
 	[Range(0, 1200)]
  	public float secondsBeforeGameEnd = 0.0f;

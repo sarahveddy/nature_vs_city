@@ -7,13 +7,25 @@ def create(db):
 
         bejeweledStatID = db.Column(db.Integer, primary_key=True, autoincrement=True)
         participantID = db.Column(db.Integer, db.ForeignKey('participant.participantID'))
-        timeCompleted = db.Column(db.DateTime, nullable=False, default=datetime.now())
-        roundNum = db.Column(db.Integer, nullable=False, default=0)
-        score = db.Column(db.Integer, nullable=False, default=0)
-        row3 = db.Column(db.Integer, nullable=False, default=0)
-        row4 = db.Column(db.Integer, nullable=False, default=0)
-        row5 = db.Column(db.Integer, nullable=False, default=0)
-        special_4 = db.Column(db.Integer, nullable=False, default=0)
-        special_5 = db.Column(db.Integer, nullable=False, default=0)
+        submitTime = db.Column(db.DateTime, nullable=False, default=datetime.min)
+        level = db.Column(db.Integer, nullable=False, default=-1) #0 for forest and 1 for urban
+
 
     return BejeweledStats
+
+
+
+    # colby's code
+
+    # class SHTrial(db.Model):
+    #     __tablename__ = "sh_trial"
+    #
+    #     shStateID = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    #     participantID = db.Column(db.Integer, db.ForeignKey('participant.participantID'))
+    #     submitTime = db.Column(db.DateTime, nullable=False, default=datetime.min)
+    #     duration = db.Column(db.Float, nullable=False, default=0.0)
+    #     avgFps = db.Column(db.Float, nullable=False, default=0.0)
+    #     trialNumber = db.Column(db.Integer, nullable=False, default=0)
+    #     sessionNumber = db.Column(db.Integer, nullable=False, default=0)
+    #     difficultyRotation = db.Column(db.Float, nullable=False, default=0.0)
+    #     difficultySpawning = db.Column(db.Float, nullable=False, default=0.0)
