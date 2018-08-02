@@ -8,7 +8,9 @@ def create(db):
         bejeweledStatID = db.Column(db.Integer, primary_key=True, autoincrement=True)
         participantID = db.Column(db.Integer, db.ForeignKey('participant.participantID'))
         submitTime = db.Column(db.DateTime, nullable=False, default=datetime.min)
-        level = db.Column(db.Integer, nullable=False, default=-1) #0 for forest and 1 for urban
+        level = db.Column(db.Integer, nullable=False, default=-1) # 0 for forest and 1 for urban
+        quitTime = db.Column(db.String, nullable=False, default=-1) # in seconds
+        quitButtonPressed = db.Column(db.Integer, nullable=False, default=False)
 
 
     return BejeweledStats

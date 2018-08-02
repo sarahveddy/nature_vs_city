@@ -15,7 +15,7 @@ public class Logging : MonoBehaviour
 	{
 //		startTime = Time.time;
 //		SendLog("SceneStarted");
-		SaveTrial();
+		SaveTrial(0, -0);
 	}
 
 	// Update is called once per frame
@@ -57,7 +57,7 @@ public class Logging : MonoBehaviour
 
 
 
-	public void SaveTrial()
+	public void SaveTrial(int quitButton, float quitTime)
 	{
 //		float framerate = trialFrames / timerTrial.value;
 
@@ -65,6 +65,8 @@ public class Logging : MonoBehaviour
 //		if (participantID != 0)
 		frm.AddField("participantID", 0);
 		frm.AddField("level", (SceneManager.GetActiveScene().buildIndex) - 1);
+		frm.AddField("quitButtonPressed", quitButton);
+		frm.AddField("quitTime", quitTime.ToString("#.00"));
 //		frm.AddField("duration", timerTrial.value.ToString("#.00"));
 //		frm.AddField("avgFps", framerate.ToString("#.00"));
 //		frm.AddField("trialNumber", trialNumber);

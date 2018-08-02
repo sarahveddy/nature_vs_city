@@ -76,7 +76,12 @@ public class InGameScript : MonoBehaviour
 			//Keeps track of gameplay time
 			timePlayed = Time.realtimeSinceStartup - pauseTime - PersistentManagerScript.Instance.gameplayStart;
 			timeLeft = quitGameTime - timePlayed;
-
+			if (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart - pauseTime > quitGameTime &&
+				PersistentManagerScript.Instance.gameplayStarted &&
+				iPauseStatus == 0)
+			{
+				Quit(0);
+			}
 			//Decides if it is time for the quitbutton to appear 
 			if (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart - pauseTime > quitButtonTime &&
 				PersistentManagerScript.Instance.gameplayStarted &&
@@ -87,12 +92,7 @@ public class InGameScript : MonoBehaviour
 			}
 	
 			//Decides if it is time to automatically close the game
-			if (Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart - pauseTime > quitGameTime &&
-				PersistentManagerScript.Instance.gameplayStarted &&
-				iPauseStatus == 0)
-			{
-				Quit();
-			}
+			
 			
 			//there is no menu to be displayed
 			if (iMenuStatus == 0) //normal gameplay
@@ -300,16 +300,18 @@ public class InGameScript : MonoBehaviour
 	/*
 	*	FUNCTION: Close game (in editor), or redirect to next page
 	*/
-		public void Quit()
+		public void Quit(int quitButtonPressed)
 		{
+			FindObjectOfType<Logging>().SaveTrial(quitButtonPressed, timePlayed);
 			string[] s = Application.absoluteURL.Split('/');
 			string newURL = s[0] + "/redirect_next_page";
-//			FindObjectOfType<Logging>().SendLog("QUIT BUTTON PRESSED",(Time.realtimeSinceStartup - PersistentManagerScript.Instance.gameplayStart - pauseTime).ToString());
+			SceneManager.LoadScene(0);
+			
 			#if UNITY_EDITOR
 					UnityEditor.EditorApplication.isPlaying = false;
 			#else
 					Application.OpenURL(newURL); 
-				#endif
+			#endif
 		}
 	
 		public bool isGamePaused()

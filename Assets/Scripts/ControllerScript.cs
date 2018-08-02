@@ -400,7 +400,7 @@ public class ControllerScript : MonoBehaviour {
 				Orb_Rect = new Rect(screenPoint.x - ( buttonSize.x * 0.5f ), screenPoint.y - ( buttonSize.y * 0.5f ), buttonSize.x, buttonSize.y);
 				if(Orb_Rect.Contains(Input.mousePosition) && PersistentManagerScript.Instance.exitButton)
 				{
-					SendMessage("Quit");
+					SendMessage("Quit", 1);
 	
 				}
 			}

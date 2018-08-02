@@ -22,12 +22,15 @@ def intro():
 def game_bejeweled():
     if request.method == 'POST':
         trial = db.BejeweledStats()
+
         try:
             trial.participantID = session['participantID']
         except: # This because I sometimes test from Unity directly
             trial.participantID = request.form['participantID']
         trial.submitTime = datetime.now()
         trial.level = request.form['level']
+        trial.quitTime = request.form['quitTime']
+        trial.quitButtonPressed = request.form['quitButtonPressed']
 
         db.session.add(trial)
         db.session.commit()
