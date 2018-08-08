@@ -1,0 +1,86 @@
+{
+   "title":"RecExp",
+   "instructions":"????INSTRUCTIONS",
+   "questions":[
+      {
+         "questiontype":"radiogrid",
+         "id":"radio_1",
+         "shuffle": "true",
+         "labels":[
+            "I do not agree at all",
+            "",
+            "",
+            "",
+            "I fully agree"
+
+         ],
+         "q_text":[
+            {
+               "id":"RecExp_01",
+               "text":"I forget about work."
+            },
+            {
+               "id":"RecExp_02",
+               "text":"I don't think about work at all."
+            },
+            {
+               "id":"RecExp_03",
+               "text":"I distance myself from my work."
+            },
+            {
+               "id":"RecExp_04",
+               "text":"I get a break from the demands of work."
+            },
+            {
+               "id":"RecExp_05",
+               "text":"I kick back and relax."
+            },
+            {
+               "id":"RecExp_06",
+               "text":"I do relaxing thing."
+            },
+            {
+               "id":"RecExp_07",
+               "text":"I use the time to relax."
+            },
+            {
+               "id":"RecExp_08",
+               "text":"I take time for leisure."
+            },
+            {
+               "id":"RecExp_09",
+               "text":"I learn new things."
+            },
+            {
+               "id":"RecExp_10",
+               "text":"I seek out intellectual challenges."
+            },
+            {
+               "id":"RecExp_11",
+               "text":"I do things that challenge me."
+            },
+            {
+               "id":"RecExp_12",
+               "text":"I do something to broaden my horizons."
+            },
+            {
+               "id":"RecExp_13",
+               "text":"I feel like I can decide for myself what to do."
+            },
+            {
+               "id":"RecExp_14",
+               "text":"I decide my own schedule."
+            },
+            {
+               "id":"RecExp_15",
+               "text":"I determine for myself how I will spend my time."
+            },
+            {
+               "id":"RecExp_16",
+               "text":"I take care of things the way that I want them done."
+            }
+         ]
+      }
+
+   ]
+}

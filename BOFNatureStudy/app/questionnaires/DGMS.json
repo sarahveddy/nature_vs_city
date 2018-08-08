@@ -1,0 +1,326 @@
+{
+   "title":"DGMS",
+   "instructions":"????INSTRUCTIONS",
+   "questions":[
+      {
+         "questiontype":"radiogrid",
+         "id":"radio_1",
+         "shuffle": "true",
+         "labels":[
+            "I do not agree at all",
+            "",
+            "",
+            "",
+            "I fully agree"
+
+         ],
+         "q_text":[
+            {
+               "id":"DGMS_01",
+               "text":"I take pleasure in mutually bonding with other players."
+            },
+            {
+               "id":"DGMS_02",
+               "text":"Feeling a deep and personal connection to other players is important to me."
+            },
+            {
+               "id":"DGMS_03",
+               "text":"I like to share thoughts and emotions with players who are important to me."
+            },
+            {
+               "id":"DGMS_04",
+               "text":"I enjoy cultivating meaningful relationships in games."
+            },
+            {
+               "id":"DGMS_05",
+               "text":"I enjoy the company of other players in a game.."
+            },
+            {
+               "id":"DGMS_06",
+               "text":"I e like reasonless chatting with other players."
+            },
+            {
+               "id":"DGMS_07",
+               "text":"I have more fun if I can play with friends."
+            },
+            {
+               "id":"DGMS_08",
+               "text":"Enjoying positive social interactions is an important part of gaming for me."
+            },
+            {
+               "id":"DGMS_09",
+               "text":"Being a part of a group with many other players makes me feel secure."
+            },
+            {
+               "id":"DGMS_10",
+               "text":"In games, I wish to be part of a group."
+            },
+            {
+               "id":"DGMS_11",
+               "text":"I feel relieed when other players interact with me."
+            },
+            {
+               "id":"DGMS_12",
+               "text":"I am glad if I find stronger players, who want to spend time with me."
+            },
+            {
+               "id":"DGMS_13",
+               "text":"In games I hope that other players include me into their group."
+            },
+            {
+               "id":"DGMS_14",
+               "text":"In games, I am worried that other players won't like me."
+            },
+            {
+               "id":"DGMS_15",
+               "text":"I have a strong wsh not to be rejected by other players."
+            },
+            {
+               "id":"DGMS_16",
+               "text":"I don't want to end up alone in games."
+            },
+            {
+               "id":"DGMS_17",
+               "text":"Playing on my own makes me feel lonely."
+            },
+            {
+               "id":"DGMS_18",
+               "text":"I am worried that my gaming friends will turn their back on me."
+            },
+            {
+               "id":"DGMS_19",
+               "text":"Challenging tasks in games are fun."
+            },
+            {
+               "id":"DGMS_20",
+               "text":"I am eager to engage with content that captivates me."
+            },
+            {
+               "id":"DGMS_21",
+               "text":"I seek out gaming activities in which I can be fully absorbed."
+            },
+            {
+               "id":"DGMS_22",
+               "text":"I strive to perform fluently when I play games."
+            },
+            {
+               "id":"DGMS_23",
+               "text":"I set high standards for myself when it comes to improving my abilities."
+            },
+            {
+               "id":"DGMS_24",
+               "text":"I am constantly trying to improve my skill in games."
+            },
+            {
+               "id":"DGMS_25",
+               "text":"If a game task is difficult, I need to master it."
+            },
+            {
+               "id":"DGMS_26",
+               "text":"I always try to perform my very best in games."
+            },
+            {
+               "id":"DGMS_27",
+               "text":"I always aim to find elegant solutions for problems in games."
+            },
+            {
+               "id":"DGMS_28",
+               "text":"I always try to perform better than others in games."
+            },
+            {
+               "id":"DGMS_29",
+               "text":"I like to be more skilled than other players."
+            },
+            {
+               "id":"DGMS_30",
+               "text":"I enjoy when score boards display how well I contributed to my team's success."
+            },
+            {
+               "id":"DGMS_31",
+               "text":"I fell proud when I achieve in-game goals that few can complete."
+            },
+            {
+               "id":"DGMS_32",
+               "text":"I feel relieved when I succeed in a game."
+            },
+            {
+               "id":"DGMS_33",
+               "text":"If game content is difficult, I am worried that I might not succeed"
+            },
+            {
+               "id":"DGMS_34",
+               "text":"I'd rather set the difficulty level in games lower than risk failure."
+            },
+            {
+               "id":"DGMS_35",
+               "text":"I feel a strong need to avoid making mistakes in games."
+            },
+            {
+               "id":"DGMS_36",
+               "text":"I am anxious aobut being perceived as unskilled in games."
+            },
+            {
+               "id":"DGMS_37",
+               "text":"I feel helpless when I perform badly in games."
+            },
+            {
+               "id":"DGMS_38",
+               "text":"I enjoy assisting other player when they need help."
+            },
+            {
+               "id":"DGMS_39",
+               "text":"I am eager to provide emotional support for other players."
+            },
+            {
+               "id":"DGMS_40",
+               "text":"I help other players through the difficulties they face."
+            },
+            {
+               "id":"DGMS_41",
+               "text":"I find it rewarding to mentor other players who need guidance."
+            },
+            {
+               "id":"DGMS_42",
+               "text":"I feel competent when I give other players advice or directions."
+            },
+            {
+               "id":"DGMS_43",
+               "text":"I like to be a good influence on other players."
+            },
+            {
+               "id":"DGMS_44",
+               "text":"I encourage other players in order to motivate them."
+            },
+            {
+               "id":"DGMS_45",
+               "text":"I try to imporve an outcome by taking the lead when playing games."
+            },
+            {
+               "id":"DGMS_46",
+               "text":"I find it rewarding to take control of a team in games."
+            },
+            {
+               "id":"DGMS_47",
+               "text":"I like it when players turn to me over others when they have questions."
+            },
+            {
+               "id":"DGMS_48",
+               "text":"I want other players to recognize my high status."
+            },
+            {
+               "id":"DGMS_49",
+               "text":"I like to collect the most prestigious items to show off in games."
+            },
+            {
+               "id":"DGMS_50",
+               "text":"I try to influence other players, so they will support me maintaining my status."
+            },
+            {
+               "id":"DGMS_51",
+               "text":"I enjoy dominating others in a game."
+            },
+            {
+               "id":"DGMS_52",
+               "text":"I am willing to use aggressive tactics in a game to get my way."
+            },
+            {
+               "id":"DGMS_53",
+               "text":"When other players challenge me, I want to put them in their place."
+            },
+            {
+               "id":"DGMS_54",
+               "text":"I want other players to acknowledge my superiority."
+            },
+            {
+               "id":"DGMS_55",
+               "text":"I dislike being surrounded by stronger players."
+            },
+            {
+               "id":"DGMS_56",
+               "text":"I always try to perform my very best in games."
+            },
+            {
+               "id":"DGMS_57",
+               "text":"I always aim to find elegant solutions for problems in games."
+            },
+            {
+               "id":"DGMS_58",
+               "text":"I always try to perform better than others in games."
+            },
+            {
+               "id":"DGMS_59",
+               "text":"I like to be more skilled than other players.."
+            },
+            {
+               "id":"DGMS_60",
+               "text":"I am eager to engage with content that captivates me."
+            },
+            {
+               "id":"DGMS_61",
+               "text":"I seek out gaming activities in which I can be fully absorbed."
+            },
+            {
+               "id":"DGMS_62",
+               "text":"I strive to perform fluently when I play games."
+            },
+            {
+               "id":"DGMS_63",
+               "text":"I set high standards for myself when it comes to improving my abilities."
+            },
+            {
+               "id":"DGMS_64",
+               "text":"I am constantly trying to improve my skill in games."
+            },
+            {
+               "id":"DGMS_65",
+               "text":"I f a game task is difficult, I need to master it."
+            },
+            {
+               "id":"DGMS_66",
+               "text":"I always try to perform my very best in games."
+            },
+            {
+               "id":"DGMS_67",
+               "text":"I always aim to find elegant solutions for problems in games."
+            },
+            {
+               "id":"DGMS_68",
+               "text":"I always try to perform better than others in games."
+            },
+            {
+               "id":"DGMS_69",
+               "text":"I like to be more skilled than other players.."
+            },
+            {
+               "id":"DGMS_70",
+               "text":"I am eager to engage with content that captivates me."
+            },
+            {
+               "id":"DGMS_71",
+               "text":"I seek out gaming activities in which I can be fully absorbed."
+            },
+            {
+               "id":"DGMS_72",
+               "text":"I strive to perform fluently when I play games."
+            },
+            {
+               "id":"DGMS_73",
+               "text":"I set high standards for myself when it comes to improving my abilities."
+            },
+            {
+               "id":"DGMS_74",
+               "text":"I am constantly trying to improve my skill in games."
+            },
+            {
+               "id":"DGMS_75",
+               "text":"I f a game task is difficult, I need to master it."
+            },
+            {
+               "id":"DGMS_76",
+               "text":"I always try to perform my very best in games."
+            }
+         ]
+      }
+
+   ]
+}

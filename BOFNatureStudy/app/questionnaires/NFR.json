@@ -1,0 +1,64 @@
+{
+   "title":"NFR",
+   "instructions":"Please indicate whether or not the following statements apply to you.",
+   "code":"",
+   "questions":[
+      {
+         "questiontype":"radiogrid",
+         "id":"radio_1",
+         "shuffle": "true",
+         "labels":[
+            "Yes",
+            "No"
+
+         ],
+         "q_text":[
+            {
+               "id":"NFR_01",
+               "text":"I find it hard to relax at the end of a working day"
+            },
+            {
+               "id":"NFR_02",
+               "text":"At the end of a working day I am really feeling worn-out"
+            },
+            {
+               "id":"NFR_03",
+               "text":"My job causes me to feel rather exhausted at the end of a working day"
+            },
+            {
+               "id":"NFR_04",
+               "text":"Generally speaking, I'm still feeling fresh after supper"
+            },
+            {
+               "id":"NFR_05",
+               "text":"Generally speaking, I am able to relax only on a second day off"
+            },
+            {
+               "id":"NFR_06",
+               "text":"I have trouble concentrating in the hours off after my working day"
+            },
+            {
+               "id":"NFR_07",
+               "text":"I find it hard to show interest in other people when I just came home from work"
+            },
+            {
+               "id":"NFR_08",
+               "text":"In general, it takes me over an hour to feel fully recovered after work"
+            },
+            {
+               "id":"NFR_09",
+               "text":"When I get home, people should leave me alone for some time"
+            },
+            {
+               "id":"NFR_10",
+               "text":"After a working day I am often too tired to start other activities"
+            },
+            {
+               "id":"NFR_11",
+               "text":"During the last part of the working day I cannot optimally perform my job because of fatigue sometimes"
+            }
+         ]
+      }
+
+   ]
+}

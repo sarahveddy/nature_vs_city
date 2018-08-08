@@ -16,6 +16,13 @@ def intro():
     return render_template("intro.html")
 
 
+@bejeweled.route("/affectInduction")
+@verify_correct_page
+@verify_session_valid
+def intro():
+    return render_template("affectInduction.html")
+
+
 @bejeweled.route("/game_bejeweled", methods=['POST', 'GET'])
 @verify_correct_page
 @verify_session_valid

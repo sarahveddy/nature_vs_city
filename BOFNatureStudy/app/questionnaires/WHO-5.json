@@ -1,0 +1,44 @@
+{
+   "title":"WHO-5",
+   "instructions":"Please indicate for each of the five statements which is closest to how you have been feeling over the last two weeks. Notice that higher numbers mean better well-being. Example: If you have felt cheerful and in good spirits more than half of the time during the last two weeks, mark the third choice.",
+   "code":"",
+   "questions":[
+      {
+         "questiontype":"radiogrid",
+         "id":"radio_1",
+         "shuffle": "true",
+         "labels":[
+            "All of the time",
+            "Most of the time",
+            "More than half of the time",
+            "Less than half of the time",
+            "Some of the time",
+            "At no time"
+
+         ],
+         "q_text":[
+            {
+               "id":"WHO-5_01",
+               "text":"I have felt cheerful and in good spirits"
+            },
+            {
+               "id":"WHO-5_02",
+               "text":"I have felt calm and relaxed"
+            },
+            {
+               "id":"WHO-5_03",
+               "text":"I have felt active and vigorous"
+            },
+            {
+               "id":"WHO-5_04",
+               "text":"I woke up feeling fresh and rested"
+            },
+           {
+             "id": "WHO-5_05",
+             "text": "My daily life has been filled with things that interest me"
+           }
+         ]
+      }
+
+   ]
+}

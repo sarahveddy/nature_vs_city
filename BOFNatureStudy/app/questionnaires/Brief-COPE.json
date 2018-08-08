@@ -33,15 +33,6 @@
      {
         "questiontype":"slider",
         "instructions":"I've been thinking hard about what steps to take.",
-        "id":"Brief-COPE_3",
-        "datatype":"integer",
-        "left":"I haven't been doing this at all",
-        "right":"I've been doing this a lot",
-        "tick_count":"3"
-     },
-     {
-        "questiontype":"slider",
-        "instructions":"I've been trying to see it in a different light, to make it seem more positive.",
         "id":"Brief-COPE_4",
         "datatype":"integer",
         "left":"I haven't been doing this at all",
@@ -50,7 +41,7 @@
      },
      {
         "questiontype":"slider",
-        "instructions":"I've been looking for something good in what is happening.",
+        "instructions":"I've been trying to see it in a different light, to make it seem more positive.",
         "id":"Brief-COPE_5",
         "datatype":"integer",
         "left":"I haven't been doing this at all",
@@ -59,7 +50,7 @@
      },
      {
         "questiontype":"slider",
-        "instructions":"I've been accepting the reality of the fact that it has happened.",
+        "instructions":"I've been looking for something good in what is happening.",
         "id":"Brief-COPE_6",
         "datatype":"integer",
         "left":"I haven't been doing this at all",
@@ -68,7 +59,7 @@
      },
      {
         "questiontype":"slider",
-        "instructions":"I've been learning to live with it.",
+        "instructions":"I've been accepting the reality of the fact that it has happened.",
         "id":"Brief-COPE_7",
         "datatype":"integer",
         "left":"I haven't been doing this at all",
@@ -77,7 +68,7 @@
      },
      {
         "questiontype":"slider",
-        "instructions":"I've been making jokes about it.",
+        "instructions":"I've been learning to live with it.",
         "id":"Brief-COPE_8",
         "datatype":"integer",
         "left":"I haven't been doing this at all",
@@ -86,7 +77,7 @@
      },
      {
         "questiontype":"slider",
-        "instructions":"I've been making fun of the situation.",
+        "instructions":"I've been making jokes about it.",
         "id":"Brief-COPE_9",
         "datatype":"integer",
         "left":"I haven't been doing this at all",
@@ -95,7 +86,7 @@
      },
      {
         "questiontype":"slider",
-        "instructions":"I've been trying to find comfort in my religion or spiritual beliefs.",
+        "instructions":"I've been making fun of the situation.",
         "id":"Brief-COPE_10",
         "datatype":"integer",
         "left":"I haven't been doing this at all",
@@ -104,7 +95,7 @@
      },
      {
         "questiontype":"slider",
-        "instructions":"I've been praying or meditating.",
+        "instructions":"I've been trying to find comfort in my religion or spiritual beliefs.",
         "id":"Brief-COPE_11",
         "datatype":"integer",
         "left":"I haven't been doing this at all",
@@ -113,7 +104,7 @@
      },
      {
         "questiontype":"slider",
-        "instructions":"I've been getting emotional support from others.",
+        "instructions":"I've been praying or meditating.",
         "id":"Brief-COPE_12",
         "datatype":"integer",
         "left":"I haven't been doing this at all",
@@ -122,7 +113,7 @@
      },
      {
         "questiontype":"slider",
-        "instructions":"I've been I've been getting comfort and understanding from someone.",
+        "instructions":"I've been getting emotional support from others.",
         "id":"Brief-COPE_13",
         "datatype":"integer",
         "left":"I haven't been doing this at all",
@@ -131,7 +122,7 @@
      },
      {
         "questiontype":"slider",
-        "instructions":"I've been trying to get advice or help from other people about what to do.",
+        "instructions":"I've been I've been getting comfort and understanding from someone.",
         "id":"Brief-COPE_14",
         "datatype":"integer",
         "left":"I haven't been doing this at all",
@@ -140,7 +131,7 @@
      },
      {
         "questiontype":"slider",
-        "instructions":"I've been I've been getting help and advice from other people.",
+        "instructions":"I've been trying to get advice or help from other people about what to do.",
         "id":"Brief-COPE_15",
         "datatype":"integer",
         "left":"I haven't been doing this at all",
@@ -149,7 +140,7 @@
      },
      {
         "questiontype":"slider",
-        "instructions":"I've been turning to work or other activities to take my mind off things.",
+        "instructions":"I've been I've been getting help and advice from other people.",
         "id":"Brief-COPE_16",
         "datatype":"integer",
         "left":"I haven't been doing this at all",
@@ -158,7 +149,7 @@
      },
      {
         "questiontype":"slider",
-        "instructions":"I've been doing something to think about it less such as going to movies, watching TV, reading, daydreaming, sleeping or shopping.",
+        "instructions":"I've been turning to work or other activities to take my mind off things.",
         "id":"Brief-COPE_17",
         "datatype":"integer",
         "left":"I haven't been doing this at all",
@@ -167,7 +158,7 @@
      },
      {
         "questiontype":"slider",
-        "instructions":"I've been telling myself \"this isn't real\".",
+        "instructions":"I've been doing something to think about it less such as going to movies, watching TV, reading, daydreaming, sleeping or shopping.",
         "id":"Brief-COPE_18",
         "datatype":"integer",
         "left":"I haven't been doing this at all",
@@ -176,8 +167,17 @@
      },
      {
         "questiontype":"slider",
-        "instructions":"I've been refusing to believe that it has happened.",
+        "instructions":"I've been telling myself \"this isn't real\".",
         "id":"Brief-COPE_19",
+        "datatype":"integer",
+        "left":"I haven't been doing this at all",
+        "right":"I've been doing this a lot",
+        "tick_count":"3"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"I've been refusing to believe that it has happened.",
+        "id":"Brief-COPE_20",
         "datatype":"integer",
         "left":"I haven't been doing this at all",
         "right":"I've been doing this a lot",

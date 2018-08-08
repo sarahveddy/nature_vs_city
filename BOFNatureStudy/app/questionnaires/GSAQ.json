@@ -1,0 +1,76 @@
+{
+   "title":"GASQ",
+   "instructions":"Please rate how much you agree or disagree with each of the following statements: ",
+   "questions":[
+      {
+         "questiontype":"radiogrid",
+         "id":"radio_1",
+         "shuffle": "true",
+         "labels":[
+            "strongly disagree",
+            "moderately disagree",
+            "slightly disagree",
+            "neutral",
+            "slightly agree",
+            "moderately agree",
+            "strongly agree"
+
+         ],
+         "q_text":[
+            {
+               "id":"GASQ_01",
+               "text":"The reasons underlying my performance in this game lie outside of me."
+            },
+            {
+               "id":"GASQ_02",
+               "text":"How well I did in this game was completely due to me."
+            },
+            {
+               "id":"GASQ_03",
+               "text":"My effort determined how well I did in this game."
+            },
+            {
+               "id":"GASQ_04",
+               "text":"In this game, my performance was determined by my abilities."
+            },
+            {
+               "id":"GASQ_05",
+               "text":"Players have very little influence over their score in this game."
+            },
+            {
+               "id":"GASQ_06",
+               "text":"It is in a player's power to become better at this game."
+            },
+            {
+               "id":"GASQ_07",
+               "text":"Players are responsible for their performance in this game."
+            },
+            {
+               "id":"GASQ_08",
+               "text":"The reasons for my performance in this game will stay the same in future games."
+            },
+            {
+               "id":"GASQ_09",
+               "text":"Whatever affected my performance will continue to affect me in future games."
+            },
+            {
+               "id":"GASQ_10",
+               "text":"The cause for my performance in this game will always be present."
+            },
+            {
+               "id":"GASQ_11",
+               "text":"The reason for my performance is something that affects other areas of my life."
+            },
+            {
+               "id":"GASQ_12",
+               "text":"Whatever caused my score in this game is only important in the context of games."
+            },
+            {
+               "id":"GASQ_13",
+               "text":"My performance in this game is typical for my general abilities in other areas of life."
+            }
+         ]
+      }
+
+   ]
+}

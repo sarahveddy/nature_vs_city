@@ -1,0 +1,186 @@
+"title":"STAI",
+   "instructions":"Please rate the degree to which each statement applies to you or your current situation, using the given scale.",
+   "code":"",
+   "questions":[
+       {
+          "questiontype":"slider",
+          "instructions":"I am happy",
+          "id":"STAI_1",
+          "datatype":"integer",
+          "left":"Almost never",
+          "right":"Almost always",
+          "tick_count":"4"
+      },
+      {
+          "questiontype":"slider",
+          "instructions":"I am content",
+          "id":"STAI_2",
+          "datatype":"integer",
+          "left":"Almost never",
+          "right":"Almost always",
+          "tick_count":"4"
+      },
+     {
+        "questiontype":"slider",
+        "instructions":"I feel satisfied with myself",
+        "id":"STAI_3",
+        "datatype":"integer",
+        "left":"Almost never",
+        "right":"Almost always",
+        "tick_count":"4"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"I feel pleasent",
+        "id":"STAI_4",
+        "datatype":"integer",
+        "left":"Almost never",
+        "right":"Almost always",
+        "tick_count":"4"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"I feel secure",
+        "id":"STAI_5",
+        "datatype":"integer",
+        "left":"Almost never",
+        "right":"Almost always",
+        "tick_count":"4"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"I lack self-confidence",
+        "id":"STAI_6",
+        "datatype":"integer",
+        "left":"Almost never",
+        "right":"Almost always",
+        "tick_count":"4"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"I feel adequate",
+        "id":"STAI_7",
+        "datatype":"integer",
+        "left":"Almost never",
+        "right":"Almost always",
+        "tick_count":"4"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"I feel like a failure",
+        "id":"STAI_8",
+        "datatype":"integer",
+        "left":"Almost never",
+        "right":"Almost always",
+        "tick_count":"4"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"I am a steady person",
+        "id":"STAI_9",
+        "datatype":"integer",
+        "left":"Almost never",
+        "right":"Almost always",
+        "tick_count":"4"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"I wish I oculd be as happy as others seem to be",
+        "id":"STAI_10",
+        "datatype":"integer",
+        "left":"Almost never",
+        "right":"Almost always",
+        "tick_count":"4"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"I make decisions easily",
+        "id":"STAI_11",
+        "datatype":"integer",
+        "left":"Almost never",
+        "right":"Almost always",
+        "tick_count":"4"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"I am \'calm, cool and collected\'",
+        "id":"STAI_12",
+        "datatype":"integer",
+        "left":"Almost never",
+        "right":"Almost always",
+        "tick_count":"4"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"I fell rested",
+        "id":"STAI_13",
+        "datatype":"integer",
+        "left":"Almost never",
+        "right":"Almost always",
+        "tick_count":"4"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"Some unimportant though runs through my mind and bothers me",
+        "id":"STAI_14",
+        "datatype":"integer",
+        "left":"Almost never",
+        "right":"Almost always",
+        "tick_count":"4"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"I worry too much over something that really doesn't matter",
+        "id":"STAI_15",
+        "datatype":"integer",
+        "left":"Almost never",
+        "right":"Almost always",
+        "tick_count":"4"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"I get in a state of tension or turmoil as I think over my recent concerns and interests",
+        "id":"STAI_16",
+        "datatype":"integer",
+        "left":"Almost never",
+        "right":"Almost always",
+        "tick_count":"4"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"I have disturbing thoughts",
+        "id":"STAI_17",
+        "datatype":"integer",
+        "left":"Almost never",
+        "right":"Almost always",
+        "tick_count":"4"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"I take disappointments so keenly that I can't put them out of my mind",
+        "id":"STAI_18",
+        "datatype":"integer",
+        "left":"Almost never",
+        "right":"Almost always",
+        "tick_count":"4"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"I feel taht difficulties are piling up so that I can't overcome them",
+        "id":"STAI_19",
+        "datatype":"integer",
+        "left":"Almost never",
+        "right":"Almost always",
+        "tick_count":"4"
+     },
+     {
+        "questiontype":"slider",
+        "instructions":"I feel nervous and restless",
+        "id":"STAI_20",
+        "datatype":"integer",
+        "left":"Almost never",
+        "right":"Almost always",
+        "tick_count":"4"
+     }
+  ]
+}
